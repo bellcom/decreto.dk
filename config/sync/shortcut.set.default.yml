@@ -1,0 +1,8 @@
+uuid: dbdfac7f-3e3d-49b9-bcaa-480d9f01b68d
+langcode: da
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: Standard

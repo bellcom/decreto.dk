@@ -1,0 +1,13 @@
+uuid: c6569d74-1643-404e-ace2-581ab93b8e5b
+langcode: da
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: SPsUXsR3Rc8d1y3gewzaAKWa1ncea_ywXX3f7LTn7k0
+id: user_unblock_user_action
+label: 'Fjern blokering af de(n) valgte bruger(e)'
+type: user
+plugin: user_unblock_user_action
+configuration: {  }

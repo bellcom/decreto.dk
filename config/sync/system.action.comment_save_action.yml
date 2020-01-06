@@ -1,0 +1,13 @@
+uuid: c6c71c24-30be-4b8f-8a1b-3a74e3e7e092
+langcode: da
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: lfyE_snmvfg_EQ3VDyhUtGAXgmqtEiqa46I3bTMg8DU
+id: comment_save_action
+label: 'Gem kommentar'
+type: comment
+plugin: 'entity:save_action:comment'
+configuration: {  }

@@ -1,0 +1,13 @@
+uuid: dd6acc3f-385b-45a4-b057-d41afffb86fb
+langcode: da
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
+id: personal
+label: 'Personlig kontaktformular'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Din besked er blevet sendt.'
+redirect: ''

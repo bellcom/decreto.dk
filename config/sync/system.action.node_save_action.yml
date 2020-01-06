@@ -1,0 +1,13 @@
+uuid: 8064d8fc-4115-4fec-ad5b-4f667cc2cc40
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: LhdsoZPL_pFas2fjaAWue4zvrQ_tEVofLYtcNec-JGM
+id: node_save_action
+label: 'Gem indhold'
+type: node
+plugin: 'entity:save_action:node'
+configuration: {  }
