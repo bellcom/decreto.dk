@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function custom_theme_preprocess_html(array &$variables) {}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function custom_theme_preprocess_page(array &$variables) {}
+
+/*
+ * Implements hook_preprocess_paragraph().
+ */
+function custom_theme_preprocess_paragraph(&$variables) {}
+
+/**
+ * Implements template_preprocess_taxonomy_term().
+ */
+function custom_theme_preprocess_taxonomy_term(&$variables) {}
+
+/*
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function custom_theme_theme_suggestions_taxonomy_term_alter(
+  &$suggestions,
+  $variables,
+  $hook
+) {
+  $suggestions[] = 'taxonomy_term__' . $variables['elements']['#taxonomy_term']->getVocabularyId() . '__' . $variables['elements']['#view_mode'];
+  $suggestions[] = 'taxonomy_term__' . $variables['elements']['#view_mode'];
+}

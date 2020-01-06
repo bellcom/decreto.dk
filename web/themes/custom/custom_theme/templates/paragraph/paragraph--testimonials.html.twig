@@ -1,0 +1,26 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="container">
+
+        {# Begin - heading #}
+        {{ content.field_heading }}
+        {# End - heading #}
+
+        <!-- Begin - embedded view -->
+        <div>
+          {{ content.embedded_view }}
+        </div>
+        <!-- End - embedded view -->
+
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,0 +1,118 @@
+// |--------------------------------------------------------------------------
+// | Sidebar
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .sidebar
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin sidebar-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.sidebar {
+  display: none;
+  position: fixed;
+
+  align-items: center;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+
+  width: 280px;
+
+  z-index: 2000;
+
+  background-color: $brand-primary;
+
+  .toolbar-horizontal.toolbar-fixed & {
+    top: 39px;
+  }
+
+  .toolbar-horizontal.toolbar-fixed.toolbar-tray-open & {
+    top: 79px;
+  }
+
+  .slinky-menu {
+    flex-grow: 1;
+  }
+
+  &.open {
+    display: flex;
+  }
+}
+
+.sidebar__close {
+  position: absolute;
+
+  top: 50px;
+  right: 50px;
+
+  color: #fff;
+
+  border: 0;
+  background-color: transparent;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+.sidebar--right {
+  right: 0;
+  left: auto;
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {
+
+  .sidebar {
+    width: 400px;
+  }
+}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

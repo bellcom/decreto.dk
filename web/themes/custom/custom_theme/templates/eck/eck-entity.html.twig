@@ -1,0 +1,32 @@
+<div{{ attributes }}>
+
+  {{ content.field_heading }}
+  {{ content.field_description }}
+
+  <div class="banner {% if right %}banner--right{% endif %}">
+    <div class="banner__box">
+      <div class="banner__body">
+
+        {% if data.subtitle %}
+          <div class="banner__prefix">{{data.subtitle}}</div>
+        {% endif %}
+
+        <h2 class="banner__title">{{data.title}}</h2>
+
+        <p class="banner__text">{{data.text|raw}}</p>
+
+        {% if data.button %}
+          <div class="banner__button">
+            {% include 'atoms-button' with {text: data.button.text} %}
+          </div>
+        {% endif %}
+
+        {% if data.more %}
+          <a href="#" class="banner__more">{{data.more}}</a>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+</div>

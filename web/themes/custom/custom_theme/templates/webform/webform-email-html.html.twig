@@ -1,0 +1,398 @@
+{# Template from: https://github.com/leemunroe/responsive-html-email-template #}
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>{{ subject }}</title>
+  <style>
+    /* -------------------------------------
+        GLOBAL RESETS
+    ------------------------------------- */
+
+    /*All the styling goes here*/
+    img {
+      border: none;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: #f6f6f6;
+      font-family: sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%; }
+    table td {
+      font-family: sans-serif;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    /* -------------------------------------
+        BODY & CONTAINER
+    ------------------------------------- */
+
+    .body {
+      background-color: #f6f6f6;
+      width: 100%;
+    }
+
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      margin: 0 auto !important;
+      /* makes it centered */
+      max-width: 580px;
+      padding: 10px;
+      width: 580px;
+    }
+
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px;
+    }
+
+    /* -------------------------------------
+        HEADER, FOOTER, MAIN
+    ------------------------------------- */
+    .main {
+      background: #ffffff;
+      border-radius: 3px;
+      width: 100%;
+      color: #20326B;
+    }
+
+    .wrapper {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .header {
+      clear: both;
+      text-align: center;
+      width: 100%;
+    }
+
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    .footer {
+      clear: both;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    .footer td,
+    .footer p,
+    .footer span,
+    .footer a {
+      color: #999999;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* -------------------------------------
+        TYPOGRAPHY
+    ------------------------------------- */
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #20326B;
+      font-family: sans-serif;
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 35px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    p,
+    ul,
+    ol {
+      font-family: sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+    p li,
+    ul li,
+    ol li {
+      list-style-position: inside;
+      margin-left: 5px;
+    }
+
+    a {
+      color: #20326B;
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------
+        BUTTONS
+    ------------------------------------- */
+    .btn {
+      box-sizing: border-box;
+      width: 100%; }
+    .btn > tbody > tr > td {
+      padding-bottom: 15px; }
+    .btn table {
+      width: auto;
+    }
+    .btn table td {
+      background-color: #ffffff;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .btn a {
+      background-color: #ffffff;
+      border: solid 1px #20326B;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #20326B;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      padding: 12px 25px;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+
+    .btn-primary table td {
+      background-color: #20326B;
+    }
+
+    .btn-primary a {
+      background-color: #20326B;
+      border-color: #20326B;
+      color: #ffffff;
+    }
+
+    /* -------------------------------------
+        OTHER STYLES THAT MIGHT BE USEFUL
+    ------------------------------------- */
+    .last {
+      margin-bottom: 0;
+    }
+
+    .first {
+      margin-top: 0;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .mt0 {
+      margin-top: 0;
+    }
+
+    .mb0 {
+      margin-bottom: 0;
+    }
+
+    .preheader {
+      color: transparent;
+      display: none;
+      height: 0;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      mso-hide: all;
+      visibility: hidden;
+      width: 0;
+    }
+
+    .powered-by a {
+      text-decoration: none;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #f6f6f6;
+      margin: 20px 0;
+    }
+
+    /* -------------------------------------
+        RESPONSIVE AND MOBILE FRIENDLY STYLES
+    ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span,
+      table[class=body] a {
+        font-size: 16px !important;
+      }
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 10px !important;
+      }
+      table[class=body] .content {
+        padding: 0 !important;
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+      table[class=body] .btn table {
+        width: 100% !important;
+      }
+      table[class=body] .btn a {
+        width: 100% !important;
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+
+    /* -------------------------------------
+        PRESERVE THESE STYLES IN THE HEAD
+    ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+
+  </style>
+</head>
+<body class="">
+<span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+  <tr>
+    <td>&nbsp;</td>
+    <td class="container">
+      <div class="header">
+        <img width="65px" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjggMTI4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMjggMTI4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6dXJsKCNTVkdJRF8xXyk7fQoJLnN0MXtmaWxsOnVybCgjU1ZHSURfMl8pO30KCS5zdDJ7ZmlsbDp1cmwoI1NWR0lEXzNfKTt9Cgkuc3Qze2ZpbGw6I0Y5Q0REQjt9Cgkuc3Q0e2ZpbGw6I0VBOTlCMzt9Cgkuc3Q1e2ZpbGw6dXJsKCNTVkdJRF80Xyk7fQo8L3N0eWxlPgo8Zz4KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOC43ODk1IiB5MT0iNjMuNjYzIiB4Mj0iMTE5LjQyMDYiIHkyPSI2My42NjMiPgoJCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNFQTRCOTAiLz4KCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojOEEyRTg4Ii8+Cgk8L2xpbmVhckdyYWRpZW50PgoJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSI2NC4xLDExNi4zIDExOS40LDc2LjEgOTguMywxMS4xIDI5LjksMTEuMSA4LjgsNzYuMSAJIi8+Cgk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzJfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjQ5Ljc3MjciIHkxPSI2My4xNzYiIHgyPSIxMTIuNDM5NSIgeTI9IjYzLjE3NiI+CgkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0UzQUFCRiIvPgoJCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNDODc1OUIiLz4KCTwvbGluZWFyR3JhZGllbnQ+Cgk8cG9seWdvbiBjbGFzcz0ic3QxIiBwb2ludHM9IjExMi40LDczLjggODYsMjggOTQuOCw2OC4xIDY0LjEsODYuOSA0OS44LDgwLjIgNjQuMSw5OC4zIAkiLz4KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfM18iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOC43ODk2IiB5MT0iNjMuNjYzIiB4Mj0iMTE5LjQyMDIiIHkyPSI2My42NjMiPgoJCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNGM0EwQzIiLz4KCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojQTk2Q0FCIi8+Cgk8L2xpbmVhckdyYWRpZW50PgoJPHBhdGggY2xhc3M9InN0MiIgZD0iTTExOS40LDc2LjFsLTAuMy0wLjhsLTM2LjgtMTJsLTYuNS0yMC4xbDIyLjgtMzEuM2wtMC4zLTAuOGwwLDBoLTAuOUw3NC44LDQyLjJINTMuNEwzMC44LDExLjFoLTAuOWwtMC4zLDAuOAoJCWwyMi44LDMxLjNsLTYuNSwyMC4xbC0zNi44LDEybC0wLjMsMC44bDAsMGwwLjcsMC41bDM3LjItMTIuMWwxNi43LDEyLjF2MzkuMWwwLjcsMC41bDAuNy0wLjVWNzYuNmwxNi43LTEyLjFsMzcuMiwxMi4xCgkJTDExOS40LDc2LjFMMTE5LjQsNzYuMXogTTUzLjQsNDQuNkw2Myw1Ny44bC0xNS40LDVMNTMuNCw0NC42eiBNNjMuNCw3NC45TDQ4LjQsNjRsMTUtNC45Vjc0Ljl6IE02NC4xLDU2LjlsLTkuNy0xMy4zaDE5LjMKCQlMNjQuMSw1Ni45eiBNNjQuOCw3NC45VjU5LjFsMTUsNC45TDY0LjgsNzQuOXogTTY1LjMsNTcuOGw5LjUtMTMuMWw1LjksMTguMUw2NS4zLDU3Ljh6Ii8+Cgk8cG9seWdvbiBjbGFzcz0ic3QzIiBwb2ludHM9Ijk0LjgsNjguMSA4NiwyOCA0MS43LDI3LjIgMzguOSw2Ni4zIDQ5LjgsODAuMiA2NC4xLDg2LjkgCSIvPgoJPHBvbHlnb24gY2xhc3M9InN0NCIgcG9pbnRzPSI0MS43LDI3LjIgODYsMjggMzQuOSwxNy45IDI3LjksNjkuOSA0OS44LDgwLjIgMzguOSw2Ni4zIAkiLz4KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfNF8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjcuOTEwMiIgeTE9IjUyLjQwNjYiIHgyPSI5NC43OTY0IiB5Mj0iNTIuNDA2NiI+CgkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0U3OUNDNCIvPgoJCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNDRDhFQkUiLz4KCTwvbGluZWFyR3JhZGllbnQ+Cgk8cGF0aCBjbGFzcz0ic3Q1IiBkPSJNNjQuOCw3Ni42bDE2LjctMTIuMUw5NCw2OC42bDAuOC0wLjVsLTAuMi0wLjhsLTEyLjMtNGwtNi41LTIwLjFsMTAuNC0xNC4zTDg2LDI4bC0wLjgtMC4yTDc0LjgsNDIuMkg1My40CgkJTDM1LjksMTguMWwtMS0wLjJsLTAuMSwxbDE3LjYsMjQuM2wtNi41LDIwLjFMMjgsNjkuMWwtMC4xLDAuOGwwLjksMC40bDE3LjktNS44bDE2LjcsMTIuMXY5LjlsMC43LDAuM2wwLjctMC40Vjc2LjZ6IE02NC44LDc0LjkKCQlWNTkuMWwxNSw0LjlMNjQuOCw3NC45eiBNODAuNyw2Mi44bC0xNS40LTVsOS41LTEzLjFMODAuNyw2Mi44eiBNNTMuNCw0NC42TDYzLDU3LjhsLTE1LjQsNUw1My40LDQ0LjZ6IE02My40LDc0LjlMNDguNCw2NGwxNS00LjkKCQlWNzQuOXogTTU0LjQsNDMuNmgxOS4zbC05LjcsMTMuM0w1NC40LDQzLjZ6Ii8+CjwvZz4KPC9zdmc+Cg==" alt="2movepeople.dk logo">
+      </div>
+      <div class="content">
+
+        <!-- START CENTERED WHITE CONTAINER -->
+        <table role="presentation" class="main">
+
+          <!-- START MAIN CONTENT AREA -->
+          <tr>
+            <td class="wrapper">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    {{ body|raw }}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- END MAIN CONTENT AREA -->
+        </table>
+        <!-- END CENTERED WHITE CONTAINER -->
+
+        <!-- START FOOTER -->
+        <div class="footer">
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="content-block">
+                <span class="apple-link"><strong>2movepeople.dk</strong>, Bredgade 20, 6000 Kolding.</span>
+                <br>
+                +45 70 26 00 85 | <a href="mailto: support@2movepeople.dk">support@2movepeople.dk</a>.
+              </td>
+            </tr>
+{#            <tr>#}
+{#              <td class="content-block powered-by">#}
+{#                Powered by <a href="http://htmlemail.io">HTMLemail</a>.#}
+{#              </td>#}
+{#            </tr>#}
+          </table>
+        </div>
+        <!-- END FOOTER -->
+
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

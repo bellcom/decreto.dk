@@ -1,0 +1,30 @@
+<div{{ attributes }}>
+  {{ content.field_heading }}
+
+  <div class="row row--equal-height-columns">
+    <div class="col-md-8 col-lg-9">
+      <div class="showcase__image-wrapper">
+        {{ content.field_image }}
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3" style="justify-content: center;">
+      <div class="showcase__content-wrapper">
+        <div class="text-right">
+          <button class="showcase__toggle showcase__toggle--next js-show-next-showcase">
+            <img src="{{ base_path ~ directory }}/dist/images/showcase-next.svg">
+          </button>
+        </div>
+
+        <div class="showcase__body">
+          {{ content.field_body }}
+        </div>
+
+        <div>
+          <button class="showcase__toggle showcase__toggle--next js-show-previous-showcase">
+            <img src="{{ base_path ~ directory }}/dist/images/showcase-previous.svg">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

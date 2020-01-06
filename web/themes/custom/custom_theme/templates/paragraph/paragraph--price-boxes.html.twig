@@ -1,0 +1,23 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      <div class="container">
+        <div class="paragraph__inner">
+
+          <div class="row row--equal-height-columns row--centered-columns">
+            {{ content }}
+          </div>
+
+        </div>
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

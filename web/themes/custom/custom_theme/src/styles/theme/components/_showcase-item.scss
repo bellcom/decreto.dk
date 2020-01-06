@@ -1,0 +1,103 @@
+// |--------------------------------------------------------------------------
+// | Showcase item
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .showcase-item
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin showcase-item-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.showcases {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.showcase-item {}
+
+.showcase__image-wrapper {
+
+  img {
+    margin: auto;
+
+    border-radius: 5px;
+    border: 2px solid $brand-primary;
+  }
+}
+
+.showcase__content-wrapper {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.showcase__toggle {
+  padding: 0;
+
+  border: 0;
+  background-color: transparent;
+}
+.showcase__toggle--previous {}
+.showcase__toggle--next {}
+
+.showcase__body {
+  margin: 20px 0;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {
+
+  .showcases {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

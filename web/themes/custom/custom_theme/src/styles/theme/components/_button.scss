@@ -1,0 +1,120 @@
+// |--------------------------------------------------------------------------
+// | Button
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .btn
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin typography-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.btn {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(90deg, #EA4B8F 0%, #8A2E88 100%);
+  box-shadow: 0 7px 10px rgba(216, 98, 171, .3);
+
+  transition: all ease-in-out .2s;
+
+  &:hover,
+  &:active {
+    background: linear-gradient(90deg, #C23B8E 0%, #6B1869 100%);
+    box-shadow: 0 7px 10px rgba(213, 63, 143, .6);
+  }
+}
+
+.btn-default {
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background: #D53F8F;
+  }
+}
+
+.btn-lg {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+.is-path-borger {
+
+  .btn-primary {
+    background: linear-gradient(90deg, #7CBAEB 0%, #03A0EA 99.96%);
+    box-shadow: 0 7px 10px rgba(153, 168, 216, .1);
+
+    &:hover,
+    &:active {
+      background: linear-gradient(90deg, #0799DD 0%, #17509F 99.96%);
+      box-shadow: 0 7px 10px rgba(153, 168, 216, 0.1);
+    }
+  }
+}
+
+.is-path-hr {
+
+  .btn-primary {
+    background: linear-gradient(90deg, #3CD6E0 0.04%, #237679 99.97%);
+    box-shadow: 0 7px 10px rgba(196, 228, 231, .2);
+
+    &:hover,
+    &:active {
+      background: linear-gradient(90deg, #50BDC4 0.04%, #135E5F 100%);
+      box-shadow: 0 7px 10px rgba(196, 228, 231, .2);
+    }
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

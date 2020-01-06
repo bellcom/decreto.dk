@@ -1,0 +1,47 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      <div class="container">
+
+        <div class="animator">
+          <div class="pentagon pentagon--main"></div>
+          <div class="pentagon pentagon--child pentagon--child-1"></div>
+          <div class="pentagon pentagon--child pentagon--child-2"></div>
+          <div class="pentagon pentagon--child pentagon--child-3"></div>
+          <div class="pentagon pentagon--child pentagon--child-4"></div>
+          <div class="pentagon pentagon--child pentagon--child-5"></div>
+          <div class="pentagon pentagon--child pentagon--child-6"></div>
+          <div class="pentagon pentagon--child pentagon--child-7"></div>
+          <div class="pentagon pentagon--child pentagon--child-8"></div>
+          <div class="pentagon pentagon--child pentagon--child-9"></div>
+          <div class="pentagon pentagon--child pentagon--child-10"></div>
+          <div class="pentagon pentagon--child pentagon--child-11"></div>
+        </div>
+
+        <div class="paragraph__inner">
+
+          {# Begin - heading #}
+          {{ content.field_heading }}
+          {# End - heading #}
+
+          {# Begin - body #}
+          {{ content.field_body }}
+          {# End - body #}
+
+          {# Begin - link #}
+          {{ content.field_link }}
+          {# End - link #}
+
+        </div>
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

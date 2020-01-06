@@ -1,0 +1,269 @@
+<!-- Begin - wrapper -->
+<div class="layout__wrapper">
+
+  {% if page.sticky_navigation__left %}
+    <!-- Begin - navigation -->
+    <aside class="sticky-navigation sticky-navigation--left">
+      {% if page.sticky_navigation__left %}
+        {{ page.sticky_navigation__left }}
+      {% endif %}
+    </aside>
+    <!-- End - navigation -->
+  {% endif %}
+
+  {% if page.sidr_right__primary %}
+    <!-- Begin - sidebar (right) -->
+    <aside class="sidebar sidebar--right">
+      <button class="js-sidebar-toggle sidebar__close">
+        <img src="{{ base_path ~ directory }}/dist/images/close.svg">
+      </button>
+
+      <!-- Begin - navigation -->
+      <nav class="slinky-menu" role="navigation">
+        {% if page.sidr_right__primary %}
+          {{ page.sidr_right__primary }}
+        {% endif %}
+      </nav>
+      <!-- End - navigation -->
+
+    </aside>
+    <!-- End - sidebar (right) -->
+  {% endif %}
+
+  <!-- Begin - content -->
+  <main class="layout__content" role="main">
+    <header class="flexy-header flexy-header--static hidden"></header>
+
+    <!-- Begin - header sticky -->
+    <header class="flexy-header flexy-header--sticky flexy-header--pinned">
+      <div class="flexy-header__row">
+        <div class="container-fluid">
+          <div class="flexy-row">
+
+            <!-- Begin - logo -->
+            <a href="{{ url('<front>') }}" class="flexy-header__logo">
+              {% if current_path == 'borger' %}
+                <img src="{{ base_path ~ directory }}/dist/images/logo--borger.svg">
+              {% elseif current_path == 'hr' %}
+                <img src="{{ base_path ~ directory }}/dist/images/logo--hr.svg">
+              {% else %}
+                <img src="{{ base_path ~ directory }}/dist/images/logo.svg">
+              {% endif %}
+            </a>
+            <!-- End - logo -->
+
+            <div class="flexy-spacer"></div>
+
+            <!-- Begin - responsive toggle -->
+            <button
+              class="flexy-header__sidebar-toggle js-sidebar-toggle">
+              <img src="{{ base_path ~ directory }}/dist/images/burger-menu.svg">
+            </button>
+            <!-- End - responsive toggle -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End - header sticky -->
+
+    <!-- Begin - content -->
+    <div class="page-content">
+      <a id="main-content"></a>
+
+      {# Highlighted #}
+      {% if page.highlighted %}
+        {% block highlighted %}
+          <div class="highlighted">
+            {{ page.highlighted }}
+          </div>
+        {% endblock %}
+      {% endif %}
+
+      {# Help #}
+      {% if page.help %}
+        {% block help %}
+          {{ page.help }}
+        {% endblock %}
+      {% endif %}
+
+      {# Begin - content #}
+      {% block content %}
+        <div{{ content_attributes }}>
+          {{ page.content }}
+        </div>
+      {% endblock %}
+      {# End - content #}
+
+    </div>
+    <!-- End - content -->
+
+  </main>
+  <!-- End - content -->
+
+  <!-- Begin - footer -->
+  <footer class="layout__footer">
+{#    <div class="line"></div>#}
+
+    {% if page.footer %}
+      {% block footer %}
+        <!-- Begin - first row -->
+        <div class="layout__footer-row layout__footer-row--first">
+          <div class="container">
+            {{ page.footer }}
+          </div>
+        </div>
+        <!-- End - first row -->
+      {% endblock %}
+    {% endif %}
+
+    <!-- Begin - second row -->
+    <div class="layout__footer-row layout__footer-row--second">
+      <div class="container-fluid">
+        <div class="flexy-row">
+          <div class="flexy-spacer"></div>
+
+          <!-- Begin - social icons -->
+          <nav role="navigation">
+            <div class="flexy-list">
+
+              {% if theme_settings.social.facebook.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.facebook.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--facebook"
+                    title="{{ theme_settings.social.facebook.tooltip }}">
+                    <span class="icon fa fa-facebook-f"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.twitter.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.twitter.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--twitter"
+                    title="{{ theme_settings.social.twitter.tooltip }}">
+                    <span class="icon fa fa-twitter"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.googleplus.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.googleplus.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--google-plus"
+                    title="{{ theme_settings.social.googleplus.tooltip }}">
+                    <span class="icon fa fa-google-plus"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.linkedin.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.linkedin.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--linkedin"
+                    title="{{ theme_settings.social.linkedin.tooltip }}">
+                    <span class="icon fa fa-linkedin"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.pinterest.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.pinterest.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--pinterest"
+                    title="{{ theme_settings.social.pinterest.tooltip }}">
+                    <span class="icon fa fa-pinterest"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.instagram.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.instagram.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--instagram"
+                    title="{{ theme_settings.social.instagram.tooltip }}">
+                    <span class="icon fa fa-instagram"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.youtube.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.youtube.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--youtube"
+                    title="{{ theme_settings.social.youtube.tooltip }}">
+                    <span class="icon fa fa-youtube"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.vimeo.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.vimeo.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--vimeo"
+                    title="{{ theme_settings.social.vimeo.tooltip }}">
+                    <span class="icon fa fa-vimeo"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.social.github.active %}
+                <div>
+                  <a
+                    href="{{ theme_settings.social.github.url }}"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    class="social-icon social-icon--github"
+                    title="{{ theme_settings.social.github.tooltip }}">
+                    <span class="icon fa fa-github"></span>
+                  </a>
+                </div>
+              {% endif %}
+
+            </div>
+          </nav>
+          <!-- End - social icons -->
+
+        </div>
+      </div>
+    </div>
+    <!-- End - second row -->
+
+  </footer>
+  <!-- End - footer -->
+
+</div>
+<!-- End - wrapper -->

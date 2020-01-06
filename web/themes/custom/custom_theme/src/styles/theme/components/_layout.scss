@@ -1,0 +1,159 @@
+// |--------------------------------------------------------------------------
+// | Layout
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .layout__content
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin layout-content-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+html,
+body {
+  overflow-x: initial;
+}
+
+body {
+  margin-top: 0 !important;
+}
+
+.layout__footer {
+  position: relative;
+
+  background-color: $brand-primary;
+
+  .line {
+    display: none;
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background-color: #fff;
+  }
+
+  .form-type-webform-markup {
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+
+    + .wrapper {
+      margin-top: 20px;
+    }
+  }
+
+  .flexy-list {
+
+    > * {
+      padding: 0 10px 0 0;
+    }
+  }
+}
+.layout__footer-row {}
+.layout__footer-row--first {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+.layout__footer-row--second {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {
+
+  .layout__footer {
+
+    .form-type-webform-markup {
+
+      + .wrapper {
+        margin-top: 70px;
+      }
+    }
+
+    .wrapper {
+      padding-left: 170px;
+    }
+
+    .line {
+      display: block;
+    }
+  }
+
+  .layout__footer-row--first {
+    padding-top: 150px;
+    padding-bottom: 70px;
+  }
+  .layout__footer-row--second {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {
+
+  .layout__footer {
+    padding-left: $sticky-navigation-height--md;
+
+    .line {
+      left: $sticky-navigation-height--md;
+    }
+  }
+}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {
+
+  .layout__footer {
+    padding-left: $sticky-navigation-height--lg;
+
+    .line {
+      left: $sticky-navigation-height--lg;
+    }
+  }
+}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

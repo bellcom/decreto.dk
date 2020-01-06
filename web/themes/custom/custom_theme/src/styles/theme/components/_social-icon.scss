@@ -1,0 +1,86 @@
+// |--------------------------------------------------------------------------
+// | Social icon.
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .social-icon
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin social-icon-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.social-icon {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  width: 40px;
+
+  font-size: $font-size-small;
+
+  background-image: url('../images/some-background.svg');
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &, &:hover {
+    text-decoration: none;
+  }
+
+  .icon {
+    display: inline-block;
+
+    color: $brand-primary;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

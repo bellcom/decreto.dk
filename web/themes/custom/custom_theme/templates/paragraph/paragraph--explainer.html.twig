@@ -1,0 +1,25 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="container">
+        {{ content.field_heading }}
+
+        <div class="tabba">
+          <div class="horizontal-tabs">
+            {{ tab }}
+          </div>
+
+          <div>
+            {{ tab_content }}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

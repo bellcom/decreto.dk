@@ -1,0 +1,74 @@
+// |--------------------------------------------------------------------------
+// | Webform
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .webform-submission-form
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin webform-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.webform-submission-form {
+
+  .form-control {
+    @extend .input-lg;
+  }
+
+  .webform-actions {
+
+    .btn {
+      @extend .btn-block;
+      @extend .btn-lg;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

@@ -1,0 +1,20 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="container">
+
+        {# Begin - faq items #}
+        {{ content.field_faq_items }}
+        {# End - faq items #}
+
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

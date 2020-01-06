@@ -1,0 +1,31 @@
+{% set classes = [
+  node.bundle|clean_class,
+  node.isPromoted() ? 'is-promoted',
+  node.isSticky() ? 'is-sticky',
+  not node.isPublished() ? 'is-unpublished',
+  view_mode ? view_mode|clean_class,
+  'clearfix',
+] %}
+<article{{ attributes.addClass(classes) }}>
+
+  {# Begin - paragraphs (banner) #}
+  {{ content.field_paragraphs_banner }}
+  {# End - paragraphs (banner) #}
+
+  <div class="paragraphs-wrapper">
+    <div class="line"></div>
+
+    {# Begin - heading #}
+    {% if node.field_heading.value %}
+      <div class="container">
+        {{ content.field_heading }}
+      </div>
+    {% endif %}
+    {# End - heading #}
+
+    {# Begin - paragraphs (wide) #}
+    {{ content.field_paragraphs_wide }}
+    {# End - paragraphs (wide) #}
+
+  </div>
+</article>

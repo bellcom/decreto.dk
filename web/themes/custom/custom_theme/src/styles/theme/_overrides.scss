@@ -1,0 +1,209 @@
+// |--------------------------------------------------------------------------
+// | Overrides
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - img
+// | - .icon
+// | - .form-control
+// | - .row--equal-height-columns
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    border: 0;
+}
+
+.icon {}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.form-control {
+    // Remove inline shadow on iOS (https://stackoverflow.com/questions/23211656/remove-ios-input-shadow)
+    appearance: none;
+
+    &,
+    &:focus {
+        @include box-shadow(none);
+    }
+}
+
+.tooltip-inner {
+    padding: 10px 20px;
+
+  min-width: 150px;
+}
+
+.list-inline {
+
+    li {
+        border-right: 1px solid $border-color;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}
+
+[class*="col-"] {
+
+  .form-group {
+
+    &,
+    &:last-child {
+      margin-bottom: $form-group-margin-bottom;
+    }
+  }
+}
+
+.form-group {
+
+  // Drupal forms add's .form-group when creating a container element.
+  &.row,
+  &[class*="col-"],
+  .div-table__thead,
+  .div-table__tbody,
+  .div-table__tr,
+  .div-table__th,
+  .div-table__td {
+
+    &, &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ajax-throbber {
+  position: fixed;
+
+  right: auto;
+  top: auto;
+  bottom: 15px;
+  left: 15px;
+
+  z-index: 50;
+
+  padding: 5px;
+  border-radius: 100%;
+
+  background-color: $brand-primary;
+
+  &.glyphicon {
+    font-size: 24px;
+
+    color: $text-color;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {
+
+  .ajax-throbber {
+    top: 50px;
+    bottom: auto;
+    right: 50px;
+    left: auto;
+
+    padding: 10px;
+
+    &.glyphicon {
+      font-size: 30px;
+    }
+  }
+}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
+
+// Flexbox
+.flexbox {
+
+  .row--equal-height-columns {
+
+    &:not(.view),
+    > .view-content {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      > [class*='col-'] {
+        display: flex;
+
+        flex-direction: column;
+      }
+
+      // Fixes Safari issue (https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap)
+      &:after,
+      &:before {
+        content: normal; // IE doesn't support `initial`
+      }
+    }
+  }
+
+  .row--centered-columns {
+
+    &:not(.view),
+    > .view-content {
+      justify-content: center;
+    }
+  }
+
+  .row--centered-column-content {
+
+    > [class*='col-'] {
+      justify-content: center;
+    }
+  }
+}
+
+// No flexbox
+.no-flexbox {}

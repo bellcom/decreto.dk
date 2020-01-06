@@ -1,0 +1,106 @@
+// |--------------------------------------------------------------------------
+// | Paragraphs
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .paragraphs
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+$paragraph-left-right-spacing-md: 50px;
+$paragraph-left-right-spacing-lg: 70px;
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin paragraphs-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.paragraphs-wrapper {
+  position: relative;
+
+  .line {
+    display: none;
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background-color: $brand-primary;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {
+
+  .paragraphs-wrapper {
+
+    .line {
+      display: block;
+    }
+  }
+}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {
+
+  .paragraphs-wrapper {
+    padding-left: $sticky-navigation-height--md;
+    padding-right: $paragraph-left-right-spacing-md;
+
+    .line {
+      left: $sticky-navigation-height--md;
+    }
+  }
+}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {
+
+  .paragraphs-wrapper {
+    padding-left: $sticky-navigation-height--lg + $paragraph-left-right-spacing-lg;
+    padding-right: $paragraph-left-right-spacing-lg;
+
+    .line {
+      left: $sticky-navigation-height--lg;
+    }
+  }
+}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

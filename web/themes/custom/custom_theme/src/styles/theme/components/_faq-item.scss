@@ -1,0 +1,116 @@
+// |--------------------------------------------------------------------------
+// | FAQ item
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .faq-item
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin faq-item-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.faq-item {
+  margin: 8px 0;
+
+  border: 1px solid #F5F6FB;
+
+  &.open {
+    border-color: #7984A6;
+  }
+}
+
+.faq-item__heading {
+  padding: 15px floor( $grid-gutter-width / 2 );
+
+  cursor: hand;
+  cursor: pointer;
+
+  background-color: #F5F6FB;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+
+    user-select: none;
+  }
+
+  .open > & {
+    background-color: #fff;
+  }
+}
+.faq-item__body {
+  display: none;
+
+  padding-left: floor( $grid-gutter-width / 2 );
+  padding-right: floor( $grid-gutter-width / 2 );
+  padding-bottom: 15px;
+
+  font-size: $font-size-small;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .open > & {
+    display: block;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {
+
+  .faq-item__heading {
+    padding: 20px $grid-gutter-width;
+  }
+
+  .faq-item__body {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+    padding-bottom: 20px;
+  }
+}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
