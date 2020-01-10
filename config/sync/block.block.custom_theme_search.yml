@@ -1,0 +1,22 @@
+uuid: d53dbb45-fea3-4548-9020-2ec579e5a31b
+langcode: da
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - custom_theme
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: custom_theme_search
+theme: custom_theme
+region: sidr_right__primary
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }
