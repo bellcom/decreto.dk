@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | Button
+// | Flexy navigation
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .btn
+// | - .flexy-navigation
 // |
 
 // --------------------------------------------------
@@ -14,76 +14,44 @@
 // Mixins
 // --------------------------------------------------
 
-@mixin typography-mixin() {}
+@mixin flexy-navigation-mixin() {}
 
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
-.btn {
-  padding-left: 30px;
-  padding-right: 30px;
-}
+.flexy-navigation {}
+.flexy-navigation__item {
+  display: flex;
 
-.btn-primary {
-  color: #fff;
-  background: linear-gradient(90deg, #EA4B8F 0%, #8A2E88 100%);
-  box-shadow: 0 7px 10px rgba(216, 98, 171, .3);
+  align-items: center;
 
-  transition: all ease-in-out .2s;
+  > a {
+    padding: $padding-base-vertical $padding-base-horizontal;
 
-  &:hover,
-  &:active {
-    background: linear-gradient(90deg, #C23B8E 0%, #6B1869 100%);
-    box-shadow: 0 7px 10px rgba(213, 63, 143, .6);
+    line-height: initial !important;
   }
-}
 
-.btn-default {
-
-  &:hover,
-  &:active {
-    color: #fff;
-    background: #D53F8F;
+  a.order,
+  a.sign-in {
+    margin-left: 5px;
+    margin-right: 5px;
   }
-}
 
-.btn-lg {
-  padding-left: 50px;
-  padding-right: 50px;
+  a.order {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+
+  a.sign-in {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
 }
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-
-.is-path-borger {
-
-  .btn-primary {
-    background: linear-gradient(90deg, #7CBAEB 0%, #03A0EA 99.96%);
-    box-shadow: 0 7px 10px rgba(153, 168, 216, .1);
-
-    &:hover,
-    &:active {
-      background: linear-gradient(90deg, #0799DD 0%, #17509F 99.96%);
-      box-shadow: 0 7px 10px rgba(153, 168, 216, 0.1);
-    }
-  }
-}
-
-.is-path-hr {
-
-  .btn-primary {
-    background: linear-gradient(90deg, #3CD6E0 0.04%, #237679 99.97%);
-    box-shadow: 0 7px 10px rgba(196, 228, 231, .2);
-
-    &:hover,
-    &:active {
-      background: linear-gradient(90deg, #50BDC4 0.04%, #135E5F 100%);
-      box-shadow: 0 7px 10px rgba(196, 228, 231, .2);
-    }
-  }
-}
 
 // --------------------------------------------------
 // Responsive

@@ -32,46 +32,60 @@ body {
 .layout__footer {
   position: relative;
 
-  background-color: $brand-primary;
+  color: #fff;
+  background-color: $brand-tertiary;
 
-  .line {
-    display: none;
-    position: absolute;
+  a {
 
-    top: 0;
-    bottom: 0;
-
-    width: 1px;
-
-    background-color: #fff;
-  }
-
-  .form-type-webform-markup {
-
-    h1, h2, h3, h4, h5, h6 {
+    &, &:hover, &:focus {
       color: #fff;
-    }
-
-    + .wrapper {
-      margin-top: 20px;
     }
   }
 
   .flexy-list {
 
     > * {
-      padding: 0 10px 0 0;
+      padding: 0 20px 0 0;
+    }
+  }
+
+  .menu {
+    margin-left: auto;
+  }
+
+  // Resets.
+  .navbar-nav {
+    display: inline-block;
+
+    float: initial;
+
+    > li {
+      padding: 0 20px;
+
+      a {
+        padding: 0;
+
+        &, &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
     }
   }
 }
 .layout__footer-row {}
 .layout__footer-row--first {
-  padding-top: 60px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 0;
 }
 .layout__footer-row--second {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  font-size: $font-size-small;
+}
+
+.layout__footer__contact-information {
+
 }
 
 // --------------------------------------------------
@@ -97,57 +111,24 @@ body {
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
-  .layout__footer {
-
-    .form-type-webform-markup {
-
-      + .wrapper {
-        margin-top: 70px;
-      }
-    }
-
-    .wrapper {
-      padding-left: 170px;
-    }
-
-    .line {
-      display: block;
-    }
-  }
-
   .layout__footer-row--first {
-    padding-top: 150px;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 0;
   }
   .layout__footer-row--second {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .layout__footer__contact-information {
+    padding-left: 54px;
   }
 }
 
 // Desktop - only
-@media #{$breakpoint-desktop-only} {
-
-  .layout__footer {
-    padding-left: $sticky-navigation-height--md;
-
-    .line {
-      left: $sticky-navigation-height--md;
-    }
-  }
-}
+@media #{$breakpoint-desktop-only} {}
 
 // Large desktop - and up
-@media #{$breakpoint-large-desktop-and-up} {
-
-  .layout__footer {
-    padding-left: $sticky-navigation-height--lg;
-
-    .line {
-      left: $sticky-navigation-height--lg;
-    }
-  }
-}
+@media #{$breakpoint-large-desktop-and-up} {}
 
 // Print
 @media print {}

@@ -18,7 +18,9 @@
         {% endif %}
 
         <li{{ item.attributes.addClass(item_classes) }}>
-          <a href="{{ item.url }}">{{ item.title }}</a>
+          {% set link_title = item.title %}
+          {% set link_attributes = item.link_attributes %}
+          {{ link(link_title, item.url, link_attributes.addClass(item.in_active_trail ? 'active-trail')) }}
 
           {% if item.below %}
             {{ _self.menu_links(item.below, attributes.removeClass(menu_level == 0 ? 'flexy-navigation' : 'flexy-navigation__item__dropdown-menu'), menu_level + 1, classes) }}

@@ -1,71 +1,104 @@
 <!-- Begin - wrapper -->
 <div class="layout__wrapper">
 
-  {% if page.sticky_navigation__left %}
-    <!-- Begin - navigation -->
-    <aside class="sticky-navigation sticky-navigation--left">
-      {% if page.sticky_navigation__left %}
-        {{ page.sticky_navigation__left }}
-      {% endif %}
-    </aside>
-    <!-- End - navigation -->
-  {% endif %}
+  {% if page.sidr_left__primary or page.sidr_left__secondary %}
 
-  {% if page.sidr_right__primary %}
-    <!-- Begin - sidebar (right) -->
-    <aside class="sidebar sidebar--right">
-      <button class="js-sidebar-toggle sidebar__close">
-        <img src="{{ base_path ~ directory }}/dist/images/close.svg">
-      </button>
+    <!-- Begin - sidr source provider -->
+    <aside class="sidr-source-provider">
 
       <!-- Begin - navigation -->
       <nav class="slinky-menu" role="navigation">
-        {% if page.sidr_right__primary %}
-          {{ page.sidr_right__primary }}
+
+        {% if page.sidr_left__primary %}
+          {{ page.sidr_left__primary }}
         {% endif %}
+
+        {% if page.sidr_left__secondary %}
+          {{ page.sidr_left__secondary }}
+        {% endif %}
+
       </nav>
       <!-- End - navigation -->
 
     </aside>
-    <!-- End - sidebar (right) -->
+    <!-- End - sidr source provider -->
+
   {% endif %}
+
+  <!-- Begin - header static -->
+  <header class="flexy-header flexy-header--static">
+    <div class="flexy-header__row">
+      <div class="container-fluid">
+        <div class="flexy-row">
+
+          <!-- Begin - logo -->
+          <a href="{{ url('<front>') }}" class="flexy-header__logo">
+            <img src="{{ base_path ~ directory }}/dist/images/logo.svg">
+          </a>
+          <!-- End - logo -->
+
+          <div class="flexy-spacer"></div>
+
+          {% if page.flexy_navigation__primary %}
+            <!-- Begin - navigation -->
+            <nav class="flexy-header__navigation__wrapper hidden-xs hidden-sm"
+                 role="navigation">
+              {{ page.flexy_navigation__primary }}
+            </nav>
+            <!-- End - navigation -->
+          {% endif %}
+
+          <!-- Begin - responsive toggle -->
+          <button
+            class="flexy-header__sidebar-toggle js-sidebar-toggle hidden-md hidden-lg">
+            <img src="{{ base_path ~ directory }}/dist/images/burger-menu.svg">
+          </button>
+          <!-- End - responsive toggle -->
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End - header static -->
+
+  <!-- Begin - header sticky -->
+  <header class="flexy-header flexy-header--sticky">
+    <div class="flexy-header__row">
+      <div class="container-fluid">
+        <div class="flexy-row">
+
+          <!-- Begin - logo -->
+          <a href="{{ url('<front>') }}" class="flexy-header__logo">
+            <img src="{{ base_path ~ directory }}/dist/images/logo.svg">
+          </a>
+          <!-- End - logo -->
+
+          <div class="flexy-spacer"></div>
+
+          {% if page.flexy_navigation__primary %}
+            <!-- Begin - navigation -->
+            <nav class="flexy-header__navigation__wrapper hidden-xs hidden-sm"
+                 role="navigation">
+              {{ page.flexy_navigation__primary }}
+            </nav>
+            <!-- End - navigation -->
+          {% endif %}
+
+          <!-- Begin - responsive toggle -->
+          <button
+            class="flexy-header__sidebar-toggle js-sidebar-toggle hidden-md hidden-lg">
+            <img src="{{ base_path ~ directory }}/dist/images/burger-menu.svg">
+          </button>
+          <!-- End - responsive toggle -->
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End - header sticky -->
 
   <!-- Begin - content -->
   <main class="layout__content" role="main">
-    <header class="flexy-header flexy-header--static hidden"></header>
-
-    <!-- Begin - header sticky -->
-    <header class="flexy-header flexy-header--sticky flexy-header--pinned">
-      <div class="flexy-header__row">
-        <div class="container-fluid">
-          <div class="flexy-row">
-
-            <!-- Begin - logo -->
-            <a href="{{ url('<front>') }}" class="flexy-header__logo">
-              {% if current_path == 'borger' %}
-                <img src="{{ base_path ~ directory }}/dist/images/logo--borger.svg">
-              {% elseif current_path == 'hr' %}
-                <img src="{{ base_path ~ directory }}/dist/images/logo--hr.svg">
-              {% else %}
-                <img src="{{ base_path ~ directory }}/dist/images/logo.svg">
-              {% endif %}
-            </a>
-            <!-- End - logo -->
-
-            <div class="flexy-spacer"></div>
-
-            <!-- Begin - responsive toggle -->
-            <button
-              class="flexy-header__sidebar-toggle js-sidebar-toggle">
-              <img src="{{ base_path ~ directory }}/dist/images/burger-menu.svg">
-            </button>
-            <!-- End - responsive toggle -->
-
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- End - header sticky -->
 
     <!-- Begin - content -->
     <div class="page-content">
@@ -110,7 +143,68 @@
         <!-- Begin - first row -->
         <div class="layout__footer-row layout__footer-row--first">
           <div class="container">
-            {{ page.footer }}
+            <div>
+              <img src="{{ base_path ~ directory }}/dist/images/logo--white.svg">
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+
+                <div class="layout__footer__contact-information">
+                  {% if theme_settings.contact_information.business_owner_name %}
+                    <div>
+                      {{ theme_settings.contact_information.business_owner_name }}
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.contact_information.address %}
+                    <div>
+                      {{ theme_settings.contact_information.address }}
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.contact_information.zipcode and theme_settings.contact_information.city %}
+                    <div>
+                      {{ theme_settings.contact_information.zipcode }} {{ theme_settings.contact_information.city }}
+                    </div>
+                  {% endif %}
+
+                  <br>
+
+                  {% if theme_settings.contact_information.phone_readable %}
+                    <div>
+                      {{ 'Tlf.:' | trans }} {{ theme_settings.contact_information.phone_readable }}
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.contact_information.email %}
+                    <div>
+                      <a href="mailto: {{ theme_settings.contact_information.email }}">
+                        {{ theme_settings.contact_information.email }}
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  <br>
+
+                  {% if theme_settings.contact_information.working_hours %}
+                    <div>
+                      {{ theme_settings.contact_information.working_hours }}
+                    </div>
+                  {% endif %}
+
+                </div>
+
+              </div>
+              <div class="col-xs-12 col-sm-8">
+                <div class="text-right text-xs-left">
+                  {{ page.footer }}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <!-- End - first row -->
@@ -119,8 +213,10 @@
 
     <!-- Begin - second row -->
     <div class="layout__footer-row layout__footer-row--second">
-      <div class="container-fluid">
+      <div class="container">
         <div class="flexy-row">
+          Decreto, copyright © 2014-2020 Created by Bellcom
+
           <div class="flexy-spacer"></div>
 
           <!-- Begin - social icons -->

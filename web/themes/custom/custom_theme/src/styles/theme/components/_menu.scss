@@ -21,39 +21,7 @@
 // --------------------------------------------------
 
 .menu {
-  position: relative;
-
   @include list-unstyled;
-
-  li {
-
-    + li {
-      border-top: 1px solid $border-color;
-    }
-  }
-
-  a {
-    display: flex;
-
-    align-items: center;
-
-    padding: 12px 0;
-
-    font-size: $font-size-small;
-
-    &, &:hover, &:focus {
-      text-decoration: none;
-
-      color: $text-color;
-    }
-  }
-
-  .material-icons {
-    margin-right: 15px;
-
-    font-size: $font-size-base;
-    color: $headings-color-light;
-  }
 }
 
 // --------------------------------------------------

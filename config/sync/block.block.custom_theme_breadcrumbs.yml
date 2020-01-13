@@ -1,6 +1,6 @@
 uuid: 74c9229e-6052-4313-9d9c-c1e96acfd462
 langcode: da
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: custom_theme_breadcrumbs
 theme: custom_theme
-region: sidr_right__primary
+region: sidr_left__primary
 weight: 0
 provider: null
 plugin: system_breadcrumb_block

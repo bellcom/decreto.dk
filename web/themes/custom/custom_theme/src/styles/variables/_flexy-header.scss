@@ -3,7 +3,7 @@ $flexy-header-static-background-color: transparent;
 
 // Sticky
 $flexy-header-sticky-zindex: 450;
-$flexy-header-sticky-background-color: transparent;
+$flexy-header-sticky-background-color: rgba(255, 255, 255, .95);
 $flexy-header-sticky-unpinned-box-shadow: none;
 
 // Responsive (static)
@@ -11,13 +11,13 @@ $xs-flexy-header-static-row-height: 70px;
 $xs-flexy-header-static-logo-height: 40px;
 
 $sm-flexy-header-static-row-height: 70px;
-$sm-flexy-header-static-logo-height: 50px;
+$sm-flexy-header-static-logo-height: 40px;
 
-$md-flexy-header-static-row-height: 110px;
-$md-flexy-header-static-logo-height: 68px;
+$md-flexy-header-static-row-height: 86px;
+$md-flexy-header-static-logo-height: 46px;
 
-$lg-flexy-header-static-row-height: 140px;
-$lg-flexy-header-static-logo-height: 68px;
+$lg-flexy-header-static-row-height: 92px;
+$lg-flexy-header-static-logo-height: 46px;
 
 // Responsive (sticky)
 $xs-flexy-header-sticky-row-height: 70px;
@@ -26,8 +26,8 @@ $xs-flexy-header-sticky-logo-height: 40px;
 $sm-flexy-header-sticky-row-height: 70px;
 $sm-flexy-header-sticky-logo-height: 40px;
 
-$md-flexy-header-sticky-row-height: 110px;
-$md-flexy-header-sticky-logo-height: 68px;
+$md-flexy-header-sticky-row-height: 86px;
+$md-flexy-header-sticky-logo-height: 46px;
 
-$lg-flexy-header-sticky-row-height: 140px;
-$lg-flexy-header-sticky-logo-height: 68px;
+$lg-flexy-header-sticky-row-height: 92px;
+$lg-flexy-header-sticky-logo-height: 46px;

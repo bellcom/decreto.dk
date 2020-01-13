@@ -23,21 +23,7 @@ $paragraph-left-right-spacing-lg: 70px;
 // Styling
 // --------------------------------------------------
 
-.paragraphs-wrapper {
-  position: relative;
-
-  .line {
-    display: none;
-    position: absolute;
-
-    top: 0;
-    bottom: 0;
-
-    width: 1px;
-
-    background-color: $brand-primary;
-  }
-}
+.paragraphs-wrapper {}
 
 // --------------------------------------------------
 // Variants
@@ -60,41 +46,13 @@ $paragraph-left-right-spacing-lg: 70px;
 @media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@media #{$breakpoint-desktop-and-up} {
-
-  .paragraphs-wrapper {
-
-    .line {
-      display: block;
-    }
-  }
-}
+@media #{$breakpoint-desktop-and-up} {}
 
 // Desktop - only
-@media #{$breakpoint-desktop-only} {
-
-  .paragraphs-wrapper {
-    padding-left: $sticky-navigation-height--md;
-    padding-right: $paragraph-left-right-spacing-md;
-
-    .line {
-      left: $sticky-navigation-height--md;
-    }
-  }
-}
+@media #{$breakpoint-desktop-only} {}
 
 // Large desktop - and up
-@media #{$breakpoint-large-desktop-and-up} {
-
-  .paragraphs-wrapper {
-    padding-left: $sticky-navigation-height--lg + $paragraph-left-right-spacing-lg;
-    padding-right: $paragraph-left-right-spacing-lg;
-
-    .line {
-      left: $sticky-navigation-height--lg;
-    }
-  }
-}
+@media #{$breakpoint-large-desktop-and-up} {}
 
 // Print
 @media print {}

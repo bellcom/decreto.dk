@@ -70,169 +70,11 @@ $paragraph-inner-spacing-bottom-lg: 130px;
       margin-bottom: 0;
     }
   }
-
-  .animator {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    z-index: 0;
-
-    overflow: hidden;
-  }
-  .pentagon {
-    position: absolute;
-
-    top: -60px;
-    left: 0;
-    right: 0;
-    bottom: -60px;
-
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    transform: translate3d(0, 0, 0);
-
-    will-change: transform;
-    backface-visibility: hidden;
-    perspective: 1000;
-  }
-  .pentagon--main {
-    animation-name: pentagon-main;
-
-    background-image: url("../images/banner/pentagon-main.svg");
-  }
-  .pentagon--child {
-    background-image: url("../images/banner/pentagon-child.svg");
-  }
-  .pentagon--child-1 {
-    animation-name: pentagon-child--1;
-  }
-  .pentagon--child-2 {
-    animation-name: pentagon-child--2;
-  }
-  .pentagon--child-3 {
-    animation-name: pentagon-child--3;
-  }
-  .pentagon--child-4 {
-    animation-name: pentagon-child--4;
-  }
-  .pentagon--child-5 {
-    animation-name: pentagon-child--5;
-  }
-  .pentagon--child-6 {
-    animation-name: pentagon-child--6;
-  }
-  .pentagon--child-7 {
-    animation-name: pentagon-child--7;
-  }
 }
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-
-.is-path-borger {
-
-  .paragraph--type--banner-contextual-background {
-    background-color: $path-borger-color;
-  }
-}
-
-.is-path-hr {
-
-  .paragraph--type--banner-contextual-background {
-    background-color: $path-hr-color;
-  }
-}
-
-.paragraph--type--banner-contextual-background {
-
-  // Pentagon children.
-  @keyframes pentagon-child--1 {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(338deg) scale(1.26);
-    }
-    60% {
-      transform: translate3d(0, 0, 0) rotate(343deg) scale(1.31);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(338deg) scale(1.26);
-    }
-  }
-  @keyframes pentagon-child--2 {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(339deg) scale(1.32);
-    }
-    40% {
-      transform: translate3d(0, 0, 0) rotate(344deg) scale(1.37);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(339deg) scale(1.32);
-    }
-  }
-  @keyframes pentagon-child--3 {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(340deg) scale(1.37);
-    }
-    50% {
-      transform: translate3d(0, 0, 0) rotate(347deg) scale(1.47);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(340deg) scale(1.37);
-    }
-  }
-  @keyframes pentagon-child--4 {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(341deg) scale(1.42);
-    }
-    50% {
-      transform: translate3d(0, 0, 0) rotate(346deg) scale(1.43);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(341deg) scale(1.42);
-    }
-  }
-  @keyframes pentagon-child--5 {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(342deg) scale(1.47);
-    }
-    40% {
-      transform: translate3d(0, 0, 0) rotate(347deg) scale(1.52);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(342deg) scale(1.47);
-    }
-  }
-  @keyframes pentagon-child--6 {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(343deg) scale(1.52);
-    }
-    50% {
-      transform: translate3d(0, 0, 0) rotate(348deg) scale(1.57);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(343deg) scale(1.52);
-    }
-  }
-  @keyframes pentagon-child--7 {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(344deg) scale(1.57);
-    }
-    60% {
-      transform: translate3d(0, 0, 0) rotate(349deg) scale(1.62);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) rotate(344deg) scale(1.57);
-    }
-  }
-}
 
 // --------------------------------------------------
 // Responsive
@@ -301,32 +143,10 @@ $paragraph-inner-spacing-bottom-lg: 130px;
 }
 
 // Desktop - only
-@media #{$breakpoint-desktop-only} {
-
-  .paragraph--type--banner-contextual-background {
-    padding-left: $sticky-navigation-height--md;
-    padding-right: $paragraph-left-right-spacing-md;
-
-    .paragraph__inner {
-      padding-top: $paragraph-inner-spacing-top-md;
-      padding-bottom: $paragraph-inner-spacing-bottom-md;
-    }
-  }
-}
+@media #{$breakpoint-desktop-only} {}
 
 // Large desktop - and up
-@media #{$breakpoint-large-desktop-and-up} {
-
-  .paragraph--type--banner-contextual-background {
-    padding-left: $sticky-navigation-height--lg + $paragraph-left-right-spacing-lg;
-    padding-right: $paragraph-left-right-spacing-lg;
-
-    .paragraph__inner {
-      padding-top: $paragraph-inner-spacing-top-lg;
-      padding-bottom: $paragraph-inner-spacing-bottom-lg;
-    }
-  }
-}
+@media #{$breakpoint-large-desktop-and-up} {}
 
 // Print
 @media print {}
