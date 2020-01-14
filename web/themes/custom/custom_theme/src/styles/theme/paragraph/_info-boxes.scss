@@ -1,0 +1,90 @@
+// |--------------------------------------------------------------------------
+// | Info boxes
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .paragraph--type--info-boxes
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin paragraphs-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.paragraph--type--info-boxes {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .field--name-field-heading {
+    margin-bottom: 30px;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+.paragraph--type--info-boxes {}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {
+
+  .paragraph--type--info-boxes {
+
+    .field--name-field-heading {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {
+
+  .paragraph--type--info-boxes {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {
+
+  .paragraph--type--info-boxes {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

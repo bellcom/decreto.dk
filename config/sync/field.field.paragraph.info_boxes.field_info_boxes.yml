@@ -1,0 +1,28 @@
+uuid: 4a9a5bf3-8c27-4c00-bc13-6e280a21dcfb
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.info_box
+    - field.storage.paragraph.field_info_boxes
+    - paragraphs.paragraphs_type.info_boxes
+id: paragraph.info_boxes.field_info_boxes
+field_name: field_info_boxes
+entity_type: paragraph
+bundle: info_boxes
+label: 'Info bokse'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:simple_elements'
+  handler_settings:
+    target_bundles:
+      info_box: info_box
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

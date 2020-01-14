@@ -1,0 +1,30 @@
+uuid: fd8c7e53-c27e-495c-afd6-9532196e2c54
+langcode: da
+status: true
+dependencies:
+  module:
+    - eck
+    - file
+    - image
+id: simple_elements.field_icon
+field_name: field_icon
+entity_type: simple_elements
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

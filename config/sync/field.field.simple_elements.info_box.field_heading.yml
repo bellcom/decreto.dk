@@ -1,0 +1,19 @@
+uuid: a7f748eb-8f49-4936-89dc-32bfc0596cf9
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.info_box
+    - field.storage.simple_elements.field_heading
+id: simple_elements.info_box.field_heading
+field_name: field_heading
+entity_type: simple_elements
+bundle: info_box
+label: Overskrift
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

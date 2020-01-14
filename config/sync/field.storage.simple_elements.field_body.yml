@@ -1,0 +1,19 @@
+uuid: a954b120-990b-4862-8845-84cfc57b8600
+langcode: da
+status: true
+dependencies:
+  module:
+    - eck
+    - text
+id: simple_elements.field_body
+field_name: field_body
+entity_type: simple_elements
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

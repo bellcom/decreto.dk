@@ -1,0 +1,20 @@
+uuid: 6c4540f6-fe4d-448c-8774-294b7e322356
+langcode: da
+status: true
+dependencies:
+  module:
+    - eck
+    - paragraphs
+id: paragraph.field_info_boxes
+field_name: field_info_boxes
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: simple_elements
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

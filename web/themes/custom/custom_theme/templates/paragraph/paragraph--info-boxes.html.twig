@@ -1,0 +1,31 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      <div class="container">
+
+        {# Begin - heading #}
+        {{ content.field_heading }}
+        {# End - heading #}
+
+        {# Begin - info boxes #}
+        {% if paragraph.field_info_boxes.value %}
+          <div class="info-boxes">
+            <div class="row row--equal-height-columns">
+              {{ content.field_info_boxes }}
+            </div>
+          </div>
+        {% endif %}
+        {# End - info boxes #}
+
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

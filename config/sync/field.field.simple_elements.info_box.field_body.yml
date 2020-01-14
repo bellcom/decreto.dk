@@ -1,0 +1,21 @@
+uuid: 3ee378cc-31b8-41c7-8cca-f8585537d03c
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.info_box
+    - field.storage.simple_elements.field_body
+  module:
+    - text
+id: simple_elements.info_box.field_body
+field_name: field_body
+entity_type: simple_elements
+bundle: info_box
+label: Indholdstekst
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,9 @@
+uuid: 471e8e41-63a8-431b-9f28-6a46212f6c38
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.simple_elements
+name: 'Info boks'
+type: info_box
+description: ''

@@ -1,0 +1,31 @@
+uuid: 9d2e1a58-942f-4690-b1fc-d51763fded23
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.info_boxes.field_heading
+    - field.field.paragraph.info_boxes.field_info_boxes
+    - paragraphs.paragraphs_type.info_boxes
+id: paragraph.info_boxes.default
+targetEntityType: paragraph
+bundle: info_boxes
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_info_boxes:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

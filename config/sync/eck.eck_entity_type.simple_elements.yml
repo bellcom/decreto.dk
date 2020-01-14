@@ -1,0 +1,10 @@
+uuid: 8ac8a986-082a-4fbf-b877-05dc3e2f99dd
+langcode: da
+status: true
+dependencies: {  }
+id: simple_elements
+label: 'Simple elementer'
+created: false
+changed: false
+uid: false
+title: false

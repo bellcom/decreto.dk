@@ -1,0 +1,9 @@
+uuid: ddd1eff1-8eb4-4eb9-bb58-64c08837ee26
+langcode: da
+status: true
+dependencies: {  }
+id: info_boxes
+label: 'Info bokse'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

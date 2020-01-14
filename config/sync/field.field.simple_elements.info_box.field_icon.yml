@@ -1,0 +1,38 @@
+uuid: c92b1497-381a-455a-bad3-527bbf60e1be
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.info_box
+    - field.storage.simple_elements.field_icon
+  module:
+    - image
+id: simple_elements.info_box.field_icon
+field_name: field_icon
+entity_type: simple_elements
+bundle: info_box
+label: Ikon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
