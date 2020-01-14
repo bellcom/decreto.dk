@@ -1,6 +1,6 @@
 uuid: a8dd111c-7bde-4a53-b407-11f72a9b3ca2
 langcode: da
-status: true
+status: false
 dependencies:
   theme:
     - custom_theme
@@ -9,7 +9,7 @@ _core:
 id: custom_theme_page_title
 theme: custom_theme
 region: content
-weight: -50
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

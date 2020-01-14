@@ -1,7 +1,7 @@
 fonts:
   css:
     base:
-      'https://fonts.googleapis.com/css?family=Asap|Open+Sans:400,700&display=swap': { type: external }
+      'https://fonts.googleapis.com/css?family=Asap:700|Open+Sans:400,700&display=swap': { type: external }
 
 styles:
   css:

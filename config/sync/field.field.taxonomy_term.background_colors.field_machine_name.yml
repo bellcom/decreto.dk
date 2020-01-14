@@ -1,0 +1,19 @@
+uuid: a5a2c9c3-6d66-4e07-9189-c5f5d933c854
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_machine_name
+    - taxonomy.vocabulary.background_colors
+id: taxonomy_term.background_colors.field_machine_name
+field_name: field_machine_name
+entity_type: taxonomy_term
+bundle: background_colors
+label: Maskinnavn
+description: 'Eks. "white" eller "black".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

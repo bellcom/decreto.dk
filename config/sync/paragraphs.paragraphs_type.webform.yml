@@ -1,0 +1,9 @@
+uuid: 15afbfa6-c6c0-46e2-af8c-0ee0fa19263b
+langcode: da
+status: true
+dependencies: {  }
+id: webform
+label: Webform
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

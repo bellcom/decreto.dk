@@ -12,20 +12,17 @@
   {{ content.field_paragraphs_banner }}
   {# End - paragraphs (banner) #}
 
-  <div class="paragraphs-wrapper">
-    <div class="line"></div>
+  {# Begin - heading #}
+  {% if node.field_heading.value or node.field_subheading.value %}
+    <div class="container">
+      {{ content.field_heading }}
+      {{ content.field_subheading }}
+    </div>
+  {% endif %}
+  {# End - heading #}
 
-    {# Begin - heading #}
-    {% if node.field_heading.value %}
-      <div class="container">
-        {{ content.field_heading }}
-      </div>
-    {% endif %}
-    {# End - heading #}
+  {# Begin - paragraphs (wide) #}
+  {{ content.field_paragraphs_wide }}
+  {# End - paragraphs (wide) #}
 
-    {# Begin - paragraphs (wide) #}
-    {{ content.field_paragraphs_wide }}
-    {# End - paragraphs (wide) #}
-
-  </div>
 </article>

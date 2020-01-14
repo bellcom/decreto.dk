@@ -2919,7 +2919,7 @@ jquery-slinky@3.0.0:
   dependencies:
     jquery "^3.1.0"
 
-jquery@^3.1.0, jquery@^3.4.1:
+jquery@>=1.4.3, jquery@^3.1.0, jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
@@ -4528,6 +4528,18 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
+
+sidr-bootstrap-theme@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/sidr-bootstrap-theme/-/sidr-bootstrap-theme-1.0.2.tgz#db68c4c045ccbd9af388e6a3d8ed55d2e39774c4"
+  integrity sha512-ykIw7kcK67lvBcO9OPYawv+xqb6D+OaZYfG3yNMK7veqfF9uKRwg+HD8rqSvnYxBV+nQohr3UFTp1p9CnopOuw==
+
+sidr@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/sidr/-/sidr-2.2.1.tgz#2291376575d2559f4b0c563f7d40e224dd3ecc70"
+  integrity sha1-IpE3ZXXSVZ9LDFY/fUDiJN0+zHA=
+  dependencies:
+    jquery ">=1.4.3"
 
 sigmund@~1.0.0:
   version "1.0.1"

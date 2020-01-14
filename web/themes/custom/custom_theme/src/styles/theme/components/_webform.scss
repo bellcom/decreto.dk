@@ -22,16 +22,20 @@
 
 .webform-submission-form {
 
-  .form-control {
-    @extend .input-lg;
-  }
+  .form-control {}
 
-  .webform-actions {
+  .form-actions {
+    margin-bottom: 0;
+
+    text-align: center;
 
     .btn {
-      @extend .btn-block;
       @extend .btn-lg;
     }
+  }
+
+  .fieldset-legend {
+    @extend label;
   }
 }
 

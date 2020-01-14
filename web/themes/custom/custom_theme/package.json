@@ -32,7 +32,9 @@
     "slinky-bootstrap-theme": "^1.0.2",
     "tiny-slider": "^2.9.2",
     "typography-breakpoints-justification": "^1.0.0",
-    "typography-helper": "^1.0.5"
+    "typography-helper": "^1.0.5",
+    "sidr": "^2.2.1",
+    "sidr-bootstrap-theme": "^1.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

@@ -50,7 +50,7 @@
 
           <!-- Begin - responsive toggle -->
           <button
-            class="flexy-header__sidebar-toggle js-sidebar-toggle hidden-md hidden-lg">
+            class="flexy-header__sidebar-toggle sidr-toggle--right hidden-md hidden-lg">
             <img src="{{ base_path ~ directory }}/dist/images/burger-menu.svg">
           </button>
           <!-- End - responsive toggle -->
@@ -86,7 +86,7 @@
 
           <!-- Begin - responsive toggle -->
           <button
-            class="flexy-header__sidebar-toggle js-sidebar-toggle hidden-md hidden-lg">
+            class="flexy-header__sidebar-toggle sidr-toggle--right hidden-md hidden-lg">
             <img src="{{ base_path ~ directory }}/dist/images/burger-menu.svg">
           </button>
           <!-- End - responsive toggle -->
@@ -107,8 +107,10 @@
       {# Highlighted #}
       {% if page.highlighted %}
         {% block highlighted %}
-          <div class="highlighted">
-            {{ page.highlighted }}
+          <div class="container">
+            <div class="highlighted">
+              {{ page.highlighted }}
+            </div>
           </div>
         {% endblock %}
       {% endif %}

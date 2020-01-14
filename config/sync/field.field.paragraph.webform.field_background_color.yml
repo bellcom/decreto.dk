@@ -1,0 +1,29 @@
+uuid: ad9f3a26-9d96-426c-9108-6d89ab4dd555
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.webform
+    - taxonomy.vocabulary.background_colors
+id: paragraph.webform.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: webform
+label: Baggrundsfarve
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      background_colors: background_colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

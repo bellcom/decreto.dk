@@ -1,0 +1,29 @@
+uuid: 292b1cf6-f524-466f-8d3f-434fdd5a2dc4
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs_wide
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs_wide
+field_name: field_paragraphs_wide
+entity_type: node
+bundle: page
+label: 'Paragraphs (bred)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      webform:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

@@ -25,11 +25,33 @@
   .form-item-heading {
     display: none;
   }
+
+  .field--name-field-heading {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 760px;
+  }
 }
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.paragraph--type--webform {
+
+  &.paragraph--background-color-primary,
+  &.paragraph--background-color-secondary {
+
+    .form-actions {
+
+      .btn {
+        @extend .btn-tertiary;
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Responsive
@@ -45,16 +67,20 @@
 @media #{$breakpoint-tablet-and-up} {}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {}
+@media #{$breakpoint-tablet-only} {
+
+  .paragraph--type--webform {
+    padding-top: 50px;
+    padding-bottom: 45px;
+  }
+}
 
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
   .paragraph--type--webform {
-
-    .wrapper {
-      padding-left: 170px;
-    }
+    padding-top: 90px;
+    padding-bottom: 85px;
   }
 }
 

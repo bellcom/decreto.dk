@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * Implements hook_preprocess_html().
  */
@@ -13,7 +15,24 @@ function custom_theme_preprocess_page(array &$variables) {}
 /*
  * Implements hook_preprocess_paragraph().
  */
-function custom_theme_preprocess_paragraph(&$variables) {}
+function custom_theme_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+
+  // Background color
+  if ($paragraph->field_background_color && !$paragraph->field_background_color->isEmpty()) {
+
+    if ($fields_target_ids = $paragraph->get('field_background_color')->getValue()) {
+
+      if (isset($fields_target_ids[0]['target_id']) && $tid = $fields_target_ids[0]['target_id']) {
+        $taxonomy_term = Term::load($tid);
+
+        if ($fields_background_color = $taxonomy_term->get('field_machine_name')->getValue()) {
+          $variables['attributes']['class'][] = 'paragraph--background-color-' . $fields_background_color[0]['value'];
+        }
+      }
+    }
+  }
+}
 
 /**
  * Implements template_preprocess_taxonomy_term().

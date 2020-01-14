@@ -1,0 +1,8 @@
+uuid: 969a8bb2-7f4c-47c0-8964-4d1b18025d71
+langcode: da
+status: true
+dependencies: {  }
+name: Baggrundsfarver
+vid: background_colors
+description: ''
+weight: 0
