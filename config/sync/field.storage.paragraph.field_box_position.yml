@@ -1,0 +1,27 @@
+uuid: b660014c-3bb2-4111-abd7-19bb81f6a8e1
+langcode: da
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_box_position
+field_name: field_box_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Venstre
+    -
+      value: right
+      label: Højre
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

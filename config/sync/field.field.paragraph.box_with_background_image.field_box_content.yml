@@ -1,0 +1,21 @@
+uuid: 3ac6138c-7cc2-4e62-803e-7c83dfb5579b
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_box_content
+    - paragraphs.paragraphs_type.box_with_background_image
+  module:
+    - text
+id: paragraph.box_with_background_image.field_box_content
+field_name: field_box_content
+entity_type: paragraph
+bundle: box_with_background_image
+label: 'Boks indhold'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

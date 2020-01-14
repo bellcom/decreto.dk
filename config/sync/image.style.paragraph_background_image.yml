@@ -1,0 +1,15 @@
+uuid: 947cfb66-d761-4b88-83b5-8101f56f5f7c
+langcode: da
+status: true
+dependencies: {  }
+name: paragraph_background_image
+label: 'Paragraph - baggrundsbillede'
+effects:
+  ed479979-85c3-4dab-86c7-ff9948bb321d:
+    uuid: ed479979-85c3-4dab-86c7-ff9948bb321d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1700
+      height: 480
+      anchor: center-center

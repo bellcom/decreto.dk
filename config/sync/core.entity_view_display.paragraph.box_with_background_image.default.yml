@@ -1,0 +1,26 @@
+uuid: 46a840d2-2316-481f-a154-9376a903d0e3
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.box_with_background_image.field_background_image
+    - field.field.paragraph.box_with_background_image.field_box_content
+    - field.field.paragraph.box_with_background_image.field_box_position
+    - paragraphs.paragraphs_type.box_with_background_image
+  module:
+    - text
+id: paragraph.box_with_background_image.default
+targetEntityType: paragraph
+bundle: box_with_background_image
+mode: default
+content:
+  field_box_content:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_background_image: true
+  field_box_position: true

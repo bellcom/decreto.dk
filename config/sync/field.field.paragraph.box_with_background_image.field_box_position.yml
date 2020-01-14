@@ -1,0 +1,23 @@
+uuid: 3e356a9d-7b6a-40ec-ae8d-5e2f061df97d
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_box_position
+    - paragraphs.paragraphs_type.box_with_background_image
+  module:
+    - options
+id: paragraph.box_with_background_image.field_box_position
+field_name: field_box_position
+entity_type: paragraph
+bundle: box_with_background_image
+label: 'Placering af boks'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

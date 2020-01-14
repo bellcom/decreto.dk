@@ -1,0 +1,25 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }} {% if background_image %} style="background-image: url({{ background_image }});" {% endif %}>
+    {% block content %}
+
+      <div class="container">
+
+        {# Begin - box content #}
+        {% if paragraph.field_box_content.value %}
+          <div class="box">
+            {{ content.field_box_content }}
+          </div>
+        {% endif %}
+        {# End - box content #}
+
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | Call to action
+// | Webform
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .paragraph--type--call-to-action
+// | - .paragraph--type--box-with-background-image
 // |
 
 // --------------------------------------------------
@@ -20,32 +20,36 @@
 // Styling
 // --------------------------------------------------
 
-.paragraph--type--call-to-action {
-  padding-top: 15px;
-  padding-bottom: 15px;
+.paragraph--type--box-with-background-image {
+  padding-top: 30px;
+  padding-bottom: 30px;
 
-  .field--name-field-heading {
-    display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    text-align: center;
+  min-height: 300px;
+
+  .box {
+    max-width: 400px;
+
+    padding: 50px;
+
+    border-radius: $border-radius-large;
+    background-color: $body-bg-secondary;
 
     .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
     h1, h2, h3, h4, h5, h6 {
-      font-weight: $headings-font-weight-light;
-      font-size: $font-size-h4;
-    }
-  }
+      margin-top: 0;
 
-  .field--name-field-link {
-    text-align: center;
+      font-size: $font-size-h3;
+    }
   }
 }
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-
-.paragraph--type--call-to-action {}
 
 // --------------------------------------------------
 // Responsive
@@ -60,27 +64,15 @@
 // Tablet - and up
 @media #{$breakpoint-tablet-and-up} {
 
-  .paragraph--type--call-to-action {
+  .paragraph--type--box-with-background-image {
 
-    .paragraph__inner {
-      display: flex;
+    &.paragraph--box-position-left {}
 
-      justify-content: center;
-      align-items: center;
-    }
+    &.paragraph--box-position-right {
 
-    .field--name-field-heading {
-      margin-bottom: 0;
-
-      text-align: initial;
-
-      + .field--name-field-link {
-        margin-left: $grid-gutter-width;
+      .box {
+        margin-left: auto;
       }
-    }
-
-    .field--name-field-link {
-      text-align: initial;
     }
   }
 }
@@ -88,26 +80,38 @@
 // Tablet - only
 @media #{$breakpoint-tablet-only} {
 
-  .paragraph--type--call-to-action {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  .paragraph--type--box-with-background-image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    min-height: 300px;
   }
 }
 
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
-  .paragraph--type--call-to-action {
-    padding-top: 45px;
-    padding-bottom: 45px;
+  .paragraph--type--box-with-background-image {
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 
 // Desktop - only
-@media #{$breakpoint-desktop-only} {}
+@media #{$breakpoint-desktop-only} {
+
+  .paragraph--type--box-with-background-image {
+    min-height: 400px;
+  }
+}
 
 // Large desktop - and up
-@media #{$breakpoint-large-desktop-and-up} {}
+@media #{$breakpoint-large-desktop-and-up} {
+
+  .paragraph--type--box-with-background-image {
+    min-height: 450px;
+  }
+}
 
 // Print
 @media print {}

@@ -1,0 +1,9 @@
+uuid: 8324979a-6bc1-4583-bbfe-09d2c0e6914b
+langcode: da
+status: true
+dependencies: {  }
+id: box_with_background_image
+label: 'Boks m. baggrundsbillede'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
