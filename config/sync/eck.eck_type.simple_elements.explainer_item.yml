@@ -1,0 +1,9 @@
+uuid: f0134bee-e3cb-4790-973b-b045e4f553db
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.simple_elements
+name: 'Forklaring (enkelt)'
+type: explainer_item
+description: ''

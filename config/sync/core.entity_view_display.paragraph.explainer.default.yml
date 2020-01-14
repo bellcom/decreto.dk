@@ -1,0 +1,22 @@
+uuid: 1357ee19-78dd-40f6-adb9-73bd98f1fee0
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.explainer.field_explainer_items
+    - paragraphs.paragraphs_type.explainer
+id: paragraph.explainer.default
+targetEntityType: paragraph
+bundle: explainer
+mode: default
+content:
+  field_explainer_items:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

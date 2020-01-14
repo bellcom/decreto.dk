@@ -1,0 +1,50 @@
+uuid: dce7a0ec-6540-4247-8669-454e618ef819
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.explainer_item
+    - field.field.simple_elements.explainer_item.field_body
+    - field.field.simple_elements.explainer_item.field_heading
+    - field.field.simple_elements.explainer_item.field_image
+    - image.style.thumbnail
+  module:
+    - svg_image
+    - text
+id: simple_elements.explainer_item.default
+targetEntityType: simple_elements
+bundle: explainer_item
+mode: default
+content:
+  field_body:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_heading:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

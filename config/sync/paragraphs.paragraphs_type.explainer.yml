@@ -1,0 +1,9 @@
+uuid: 57b2c867-95e4-4b89-ba7b-7f3e01a3f1c8
+langcode: da
+status: true
+dependencies: {  }
+id: explainer
+label: Forklaring
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
