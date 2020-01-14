@@ -1,0 +1,28 @@
+uuid: 35638876-3f5b-4ecf-aa3a-fe17234bfa1e
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.faq_item
+    - field.storage.paragraph.field_faq_items
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.field_faq_items
+field_name: field_faq_items
+entity_type: paragraph
+bundle: faq
+label: 'Spørgsmål og svar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:simple_elements'
+  handler_settings:
+    target_bundles:
+      faq_item: faq_item
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

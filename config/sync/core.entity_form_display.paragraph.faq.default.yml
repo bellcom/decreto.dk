@@ -1,0 +1,33 @@
+uuid: 895be15a-ef57-4257-9fa4-af7eb18d8682
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq.field_faq_items
+    - paragraphs.paragraphs_type.faq
+  module:
+    - inline_entity_form
+id: paragraph.faq.default
+targetEntityType: paragraph
+bundle: faq
+mode: default
+content:
+  field_faq_items:
+    weight: 0
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+hidden:
+  created: true
+  status: true

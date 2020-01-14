@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | FAQ
+// | FAQ item
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .paragraph--type--faq
+// | - .faq-item
 // |
 
 // --------------------------------------------------
@@ -14,22 +14,55 @@
 // Mixins
 // --------------------------------------------------
 
-@mixin paragraphs-mixin() {}
+@mixin faq-item-mixin() {}
 
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
-.paragraph--type--faq {
-  padding-top: 15px;
+.faq-item {
+  margin: 8px 0;
+
+  border: 1px solid #F5F6FB;
+
+  &.open {
+    border-color: #7984A6;
+  }
+}
+
+.faq-item__heading {
+  padding: 15px floor( $grid-gutter-width / 2 );
+
+  cursor: hand;
+  cursor: pointer;
+
+  background-color: #F5F6FB;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+
+    user-select: none;
+  }
+
+  .open > & {
+    background-color: #fff;
+  }
+}
+.faq-item__body {
+  display: none;
+
+  padding-left: floor( $grid-gutter-width / 2 );
+  padding-right: floor( $grid-gutter-width / 2 );
   padding-bottom: 15px;
 
-  .field--name-field-heading {
+  font-size: $font-size-small;
+
+  p:last-child {
     margin-bottom: 0;
   }
 
-  .container {
-    max-width: 760px;
+  .open > & {
+    display: block;
   }
 }
 
@@ -48,25 +81,24 @@
 @media #{$breakpoint-mobile-only} {}
 
 // Tablet - and up
-@media #{$breakpoint-tablet-and-up} {}
+@media #{$breakpoint-tablet-and-up} {
+
+  .faq-item__heading {
+    padding: 20px $grid-gutter-width;
+  }
+
+  .faq-item__body {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+    padding-bottom: 20px;
+  }
+}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {
-
-  .paragraph--type--faq {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
+@media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@media #{$breakpoint-desktop-and-up} {
-
-  .paragraph--type--faq {
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-}
+@media #{$breakpoint-desktop-and-up} {}
 
 // Desktop - only
 @media #{$breakpoint-desktop-only} {}

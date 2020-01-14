@@ -1,0 +1,20 @@
+uuid: be65583a-8cac-4ef7-b35a-60d235b9b006
+langcode: da
+status: true
+dependencies:
+  module:
+    - eck
+    - paragraphs
+id: paragraph.field_faq_items
+field_name: field_faq_items
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: simple_elements
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

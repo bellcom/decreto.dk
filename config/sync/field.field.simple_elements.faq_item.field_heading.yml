@@ -1,0 +1,19 @@
+uuid: 8fe50afd-f407-4f1b-95b6-a16f2c0faaf4
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.faq_item
+    - field.storage.simple_elements.field_heading
+id: simple_elements.faq_item.field_heading
+field_name: field_heading
+entity_type: simple_elements
+bundle: faq_item
+label: Overskrift
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

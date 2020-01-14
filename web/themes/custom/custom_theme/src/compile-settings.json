@@ -7,6 +7,7 @@
     "node_modules/sidr/dist/jquery.sidr.js",
     "node_modules/jquery-slinky/dist/jquery.slinky.js",
     "node_modules/pace-progress/pace.js",
+    "src/javascripts/faq-items.js",
     "src/javascripts/app.js"
   ],
   "styles": [
