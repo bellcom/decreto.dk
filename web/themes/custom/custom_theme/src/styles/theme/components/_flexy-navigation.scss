@@ -34,17 +34,20 @@
 
   a.order,
   a.sign-in {
+    @extend .btn;
+
     margin-left: 5px;
     margin-right: 5px;
+
+    padding-left: $padding-base-horizontal !important;
+    padding-right: $padding-base-horizontal !important;
   }
 
   a.order {
-    @extend .btn;
     @extend .btn-primary;
   }
 
   a.sign-in {
-    @extend .btn;
     @extend .btn-secondary;
   }
 }

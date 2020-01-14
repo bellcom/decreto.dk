@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | Paragraphs
+// | Call to action
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .paragraphs
+// | - .paragraph--type--call-to-action
 // |
 
 // --------------------------------------------------
@@ -20,26 +20,24 @@
 // Styling
 // --------------------------------------------------
 
-.paragraph {
+.paragraph--type--call-to-action {
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   .field--name-field-heading {
-    margin-bottom: 20px;
+    display: block;
+
+    text-align: center;
 
     .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
     h1, h2, h3, h4, h5, h6 {
-      margin-top: 0;
-      margin-bottom: 0;
+      font-weight: $headings-font-weight-light;
+      font-size: $font-size-h3;
     }
   }
 
-  .field--name-field-subheading {
-    margin-bottom: 10px;
-
-    .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  .field--name-field-link {
+    text-align: center;
   }
 }
 
@@ -47,35 +45,7 @@
 // Variants
 // --------------------------------------------------
 
-.paragraph--background-color-default {
-  background-color: $body-bg;
-
-  .btn {
-    @extend .btn-primary;
-  }
-}
-.paragraph--background-color-primary {
-  background-color: $body-bg-primary;
-
-  .field--name-field-heading {
-    color: #fff;
-  }
-
-  .field--name-field-subheading {
-    color: #fff;
-  }
-
-  .btn {
-    @extend .btn-tertiary;
-  }
-}
-.paragraph--background-color-secondary {
-  background-color: $body-bg-secondary;
-
-  .btn {
-    @extend .btn-tertiary;
-  }
-}
+.paragraph--type--call-to-action {}
 
 // --------------------------------------------------
 // Responsive
@@ -88,19 +58,48 @@
 @media #{$breakpoint-mobile-only} {}
 
 // Tablet - and up
-@media #{$breakpoint-tablet-and-up} {}
+@media #{$breakpoint-tablet-and-up} {
+
+  .paragraph--type--call-to-action {
+
+    .paragraph__inner {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .field--name-field-heading {
+      margin-bottom: 0;
+
+      text-align: initial;
+
+      + .field--name-field-link {
+        margin-left: $grid-gutter-width;
+      }
+    }
+
+    .field--name-field-link {
+      text-align: initial;
+    }
+  }
+}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {}
+@media #{$breakpoint-tablet-only} {
+
+  .paragraph--type--call-to-action {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
-  .paragraph {
-
-    .field--name-field-heading {
-      margin-bottom: 30px;
-    }
+  .paragraph--type--call-to-action {
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 }
 

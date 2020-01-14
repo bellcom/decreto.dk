@@ -14,9 +14,11 @@
 
   {# Begin - heading #}
   {% if node.field_heading.value or node.field_subheading.value %}
-    <div class="container">
-      {{ content.field_heading }}
-      {{ content.field_subheading }}
+    <div class="node-details">
+      <div class="container">
+        {{ content.field_heading }}
+        {{ content.field_subheading }}
+      </div>
     </div>
   {% endif %}
   {# End - heading #}

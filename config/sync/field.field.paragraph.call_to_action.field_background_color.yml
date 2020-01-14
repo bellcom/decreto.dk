@@ -1,0 +1,29 @@
+uuid: 72293055-3a0a-4fcd-b06b-52af72d7ba98
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.call_to_action
+    - taxonomy.vocabulary.background_colors
+id: paragraph.call_to_action.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: call_to_action
+label: Baggrundsfarve
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      background_colors: background_colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -45,10 +45,6 @@
   &.paragraph--background-color-secondary {
 
     .form-actions {
-
-      .btn {
-        @extend .btn-tertiary;
-      }
     }
   }
 }

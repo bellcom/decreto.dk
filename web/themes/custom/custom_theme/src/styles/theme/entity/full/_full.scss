@@ -25,6 +25,38 @@ $lg-entity-full-header-inner-spacing: 90px;
 // Styling
 // --------------------------------------------------
 
+.node-details {
+
+  .field--name-field-heading {
+
+    .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+
+    + .field--name-field-subheading {
+      margin-top: 40px;
+    }
+  }
+
+  .field--name-field-subheading {
+
+    .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+
+      font-size: $font-size-base;
+      font-weight: $font-weight;
+      font-family: $font-family-base;
+      color: $text-color-secondary;
+    }
+  }
+
+  + .field--name-field-paragraphs-wide {
+    margin-top: $grid-gutter-width;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -40,7 +72,15 @@ $lg-entity-full-header-inner-spacing: 90px;
 @media #{$breakpoint-mobile-only} {}
 
 // Tablet - and up
-@media #{$breakpoint-tablet-and-up} {}
+@media #{$breakpoint-tablet-and-up} {
+
+  .node-details {
+
+    + .field--name-field-paragraphs-wide {
+      margin-top: ($grid-gutter-width * 2);
+    }
+  }
+}
 
 // Tablet - only
 @media #{$breakpoint-tablet-only} {}

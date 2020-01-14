@@ -7,19 +7,13 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+
       <div class="container">
-        {{ content.field_heading }}
-
-        <div class="tabba">
-          <div class="horizontal-tabs">
-            {{ tab }}
-          </div>
-
-          <div>
-            {{ tab_content }}
-          </div>
+        <div class="paragraph__inner">
+          {{ content }}
         </div>
       </div>
+
     {% endblock %}
   </div>
 {% endblock paragraph %}

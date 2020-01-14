@@ -55,7 +55,7 @@ $font-size-small:         14px;
 
 $font-size-h1:            64px;
 $font-size-h2:            36px;
-$font-size-h3:            24px;
+$font-size-h3:            22px;
 $font-size-h4:            20px;
 $font-size-h5:            $font-size-large;
 $font-size-h6:            $font-size-base;
@@ -149,8 +149,8 @@ $table-border-color:            #ddd !default;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              #20326B;
-$btn-default-bg:                 #F9CDDB;
+$btn-default-color:              $text-color;
+$btn-default-bg:                 #009688;
 $btn-default-border:             $btn-default-bg;
 
 $btn-primary-color:              #fff !default;

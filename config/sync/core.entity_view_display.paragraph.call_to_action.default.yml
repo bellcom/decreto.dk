@@ -1,0 +1,38 @@
+uuid: b805a26b-5197-4378-994e-3fe364388320
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.call_to_action.field_background_color
+    - field.field.paragraph.call_to_action.field_heading
+    - field.field.paragraph.call_to_action.field_link
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - link
+id: paragraph.call_to_action.default
+targetEntityType: paragraph
+bundle: call_to_action
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_background_color: true
