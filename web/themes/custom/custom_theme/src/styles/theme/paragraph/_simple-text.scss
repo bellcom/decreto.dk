@@ -10,14 +10,14 @@
 // Variables
 // --------------------------------------------------
 
-$paragraph-inner-spacing-top-xs: 20px;
-$paragraph-inner-spacing-bottom-xs: 20px;
-$paragraph-inner-spacing-top-sm: 30px;
-$paragraph-inner-spacing-bottom-sm: 30px;
-$paragraph-inner-spacing-top-md: 35px;
-$paragraph-inner-spacing-bottom-md: 35px;
-$paragraph-inner-spacing-top-lg: 35px;
-$paragraph-inner-spacing-bottom-lg: 35px;
+$paragraph-spacing-top-xs: 20px;
+$paragraph-spacing-bottom-xs: 20px;
+$paragraph-spacing-top-sm: 30px;
+$paragraph-spacing-bottom-sm: 30px;
+$paragraph-spacing-top-md: 40px;
+$paragraph-spacing-bottom-md: 40px;
+$paragraph-spacing-top-lg: 60px;
+$paragraph-spacing-bottom-lg: 60px;
 
 // --------------------------------------------------
 // Mixins
@@ -30,7 +30,11 @@ $paragraph-inner-spacing-bottom-lg: 35px;
 // --------------------------------------------------
 
 .paragraph--type--simple-text,
-.paragraph--type--simple-text-2-columns {
+.paragraph--type--simple-text-2-columns,
+.paragraph--type--text-with-image {
+  padding-top: $paragraph-spacing-top-xs;
+  padding-bottom: $paragraph-spacing-bottom-xs;
+
   background-color: #fff;
 
   .field--name-field-heading {
@@ -38,6 +42,21 @@ $paragraph-inner-spacing-bottom-lg: 35px;
     + .field--name-field-body {
       margin-top: 20px;
     }
+  }
+}
+
+.paragraph--type--text-with-image {
+  background-color: #fff;
+
+  .field--name-field-image {
+
+    img {
+      margin: auto;
+    }
+  }
+
+  [class*="col-"] {
+    justify-content: center;
   }
 }
 
@@ -68,9 +87,10 @@ $paragraph-inner-spacing-bottom-lg: 35px;
 @media #{$breakpoint-desktop-only} {
 
   .paragraph--type--simple-text,
-  .paragraph--type--simple-text-2-columns {
-    padding-top: $paragraph-inner-spacing-top-md;
-    padding-bottom: $paragraph-inner-spacing-bottom-md;
+  .paragraph--type--simple-text-2-columns,
+  .paragraph--type--text-with-image {
+    padding-top: $paragraph-spacing-top-md;
+    padding-bottom: $paragraph-spacing-bottom-md;
   }
 }
 
@@ -78,9 +98,10 @@ $paragraph-inner-spacing-bottom-lg: 35px;
 @media #{$breakpoint-large-desktop-and-up} {
 
   .paragraph--type--simple-text,
-  .paragraph--type--simple-text-2-columns {
-    padding-top: $paragraph-inner-spacing-top-lg;
-    padding-bottom: $paragraph-inner-spacing-bottom-lg;
+  .paragraph--type--simple-text-2-columns,
+  .paragraph--type--text-with-image {
+    padding-top: $paragraph-spacing-top-lg;
+    padding-bottom: $paragraph-spacing-bottom-lg;
   }
 }
 
