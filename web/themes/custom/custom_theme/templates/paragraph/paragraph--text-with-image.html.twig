@@ -11,7 +11,7 @@
         <div class="row row--equal-height-columns">
 
           {% if image_position == 'left' %}
-            <div class="col-xs-12 col-sm-5">
+            <div class="col-xs-12 col-sm-5 image-position--left">
 
               {# Begin - image #}
               {{ content.field_image }}
@@ -30,7 +30,7 @@
 
             </div>
           {% else %}
-            <div class="col-xs-12 col-sm-5 col-sm-push-7">
+            <div class="col-xs-12 col-sm-5 col-sm-push-7 image-position--right">
 
               {# Begin - image #}
               {{ content.field_image }}

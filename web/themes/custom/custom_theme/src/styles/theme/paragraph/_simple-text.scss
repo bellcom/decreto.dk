@@ -63,10 +63,23 @@ $paragraph-spacing-bottom-lg: 60px;
     }
   }
 
-  .field--name-field-image {
+  .image-position--left {
 
-    img {
-      margin: auto;
+    .field--name-field-image {
+
+      img {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .image-position--right {
+
+    .field--name-field-image {
+
+      img {
+        margin-right: auto;
+      }
     }
   }
 
