@@ -1,0 +1,9 @@
+uuid: 787a3556-235e-4470-93e9-6585cde9bf55
+langcode: da
+status: true
+dependencies: {  }
+id: banner_large
+label: 'Banner (stor)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 93ed62f2-be4a-4792-82bf-f552526d3364
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_box_2_body
+    - paragraphs.paragraphs_type.banner_2_boxes
+  module:
+    - text
+id: paragraph.banner_2_boxes.field_box_2_body
+field_name: field_box_2_body
+entity_type: paragraph
+bundle: banner_2_boxes
+label: 'Boks 2 - indholdstekst'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

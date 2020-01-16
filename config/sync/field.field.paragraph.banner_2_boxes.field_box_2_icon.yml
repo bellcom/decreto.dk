@@ -1,0 +1,38 @@
+uuid: 3b6d89b8-64fe-4e20-bfff-d931491b97b2
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_box_2_icon
+    - paragraphs.paragraphs_type.banner_2_boxes
+  module:
+    - image
+id: paragraph.banner_2_boxes.field_box_2_icon
+field_name: field_box_2_icon
+entity_type: paragraph
+bundle: banner_2_boxes
+label: 'Boks 2 - ikon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

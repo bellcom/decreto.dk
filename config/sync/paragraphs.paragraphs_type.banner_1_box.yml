@@ -1,0 +1,9 @@
+uuid: d59e0b1c-62fb-48c3-8305-1e26f65a116d
+langcode: da
+status: true
+dependencies: {  }
+id: banner_1_box
+label: 'Banner (1 boks)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

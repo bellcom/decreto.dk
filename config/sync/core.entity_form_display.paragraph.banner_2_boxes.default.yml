@@ -1,0 +1,90 @@
+uuid: 046a2655-ea82-4f14-bbcb-7b13b4b991bf
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_2_boxes.field_body
+    - field.field.paragraph.banner_2_boxes.field_box_1_body
+    - field.field.paragraph.banner_2_boxes.field_box_1_heading
+    - field.field.paragraph.banner_2_boxes.field_box_1_icon
+    - field.field.paragraph.banner_2_boxes.field_box_2_body
+    - field.field.paragraph.banner_2_boxes.field_box_2_heading
+    - field.field.paragraph.banner_2_boxes.field_box_2_icon
+    - field.field.paragraph.banner_2_boxes.field_heading
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.banner_2_boxes
+  module:
+    - svg_image
+    - text
+id: paragraph.banner_2_boxes.default
+targetEntityType: paragraph
+bundle: banner_2_boxes
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_box_1_body:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_box_1_heading:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_box_1_icon:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_box_2_body:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_box_2_heading:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_box_2_icon:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,9 @@
+uuid: 78e6180c-8811-49ac-a18f-8ac51dee5efd
+langcode: da
+status: true
+dependencies: {  }
+id: banner_with_image
+label: 'Banner (m. billede)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

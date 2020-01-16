@@ -1,0 +1,19 @@
+uuid: 7fe19e1e-692c-4482-9ef7-ecca357f1aa3
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_box_2_heading
+    - paragraphs.paragraphs_type.banner_2_boxes
+id: paragraph.banner_2_boxes.field_box_2_heading
+field_name: field_box_2_heading
+entity_type: paragraph
+bundle: banner_2_boxes
+label: 'Boks 2 - overskrift'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: e1ad6708-787d-4198-8ff0-8d76b1bf346d
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.banner_1_box
+id: paragraph.banner_1_box.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: banner_1_box
+label: Overskrift
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

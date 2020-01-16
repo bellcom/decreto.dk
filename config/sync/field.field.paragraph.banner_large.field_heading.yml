@@ -1,0 +1,19 @@
+uuid: 5f25c231-f201-48af-ba69-0000973f9ffd
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.banner_large
+id: paragraph.banner_large.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: banner_large
+label: Overskrift
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

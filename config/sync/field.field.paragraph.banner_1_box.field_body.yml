@@ -1,0 +1,21 @@
+uuid: e0a80f90-f48e-41e8-a21b-b2f472bae645
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.banner_1_box
+  module:
+    - text
+id: paragraph.banner_1_box.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: banner_1_box
+label: Indholdstekst
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

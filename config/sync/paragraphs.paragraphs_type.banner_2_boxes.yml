@@ -1,0 +1,9 @@
+uuid: 323852ad-1343-4412-b01d-b76c09593ec1
+langcode: da
+status: true
+dependencies: {  }
+id: banner_2_boxes
+label: 'Banner (2 bokse)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

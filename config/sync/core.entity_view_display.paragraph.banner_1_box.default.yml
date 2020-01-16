@@ -1,0 +1,53 @@
+uuid: bc2f6c1f-5ad3-4ef6-a18f-61a7bc041e51
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_1_box.field_body
+    - field.field.paragraph.banner_1_box.field_box_content
+    - field.field.paragraph.banner_1_box.field_heading
+    - field.field.paragraph.banner_1_box.field_link
+    - paragraphs.paragraphs_type.banner_1_box
+  module:
+    - link
+    - text
+id: paragraph.banner_1_box.default
+targetEntityType: paragraph
+bundle: banner_1_box
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_box_content:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }
