@@ -8,11 +8,6 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       <div class="container container--narrow">
-
-        {# Begin - heading #}
-        {{ content.field_heading }}
-        {# End - heading #}
-
         <div class="row row--equal-height-columns">
 
           {% if image_position == 'left' %}
@@ -25,9 +20,9 @@
             </div>
             <div class="col-xs-12 col-sm-7">
 
-              {# Begin - subheading #}
-              {{ content.field_subheading }}
-              {# End - subheading #}
+              {# Begin - heading #}
+              {{ content.field_heading }}
+              {# End - heading #}
 
               {# Begin - body #}
               {{ content.field_body }}
@@ -44,9 +39,9 @@
             </div>
             <div class="col-xs-12 col-sm-7 col-sm-pull-5">
 
-              {# Begin - subheading #}
-              {{ content.field_subheading }}
-              {# End - subheading #}
+              {# Begin - heading #}
+              {{ content.field_heading }}
+              {# End - heading #}
 
               {# Begin - body #}
               {{ content.field_body }}
