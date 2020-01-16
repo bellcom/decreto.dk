@@ -1,0 +1,19 @@
+uuid: 34222961-3c5d-4a61-b6c2-8ebb0d8e84b3
+langcode: da
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_body_secondary
+field_name: field_body_secondary
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

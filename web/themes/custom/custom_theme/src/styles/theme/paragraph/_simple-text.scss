@@ -29,44 +29,14 @@ $paragraph-inner-spacing-bottom-lg: 35px;
 // Styling
 // --------------------------------------------------
 
-.paragraph--type--simple-text {
+.paragraph--type--simple-text,
+.paragraph--type--simple-text-2-columns {
   background-color: #fff;
-
-  .paragraph__inner {
-    padding-top: $paragraph-inner-spacing-top-xs;
-    padding-bottom: $paragraph-inner-spacing-bottom-xs;
-  }
 
   .field--name-field-heading {
 
-    + .field--name-field-subheading,
     + .field--name-field-body {
       margin-top: 20px;
-    }
-  }
-
-  .field--name-field-subheading {
-
-    .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 0;
-    }
-
-    + .field--name-field-body {
-      margin-top: 20px;
-    }
-  }
-}
-
-.field--name-field-paragraphs-wide {
-
-  > .field--item {
-
-    + .field--item {
-
-      .paragraph--type--simple-text {
-        margin-top: ((0 - $grid-gutter-width) / 2);
-      }
     }
   }
 }
@@ -89,64 +59,28 @@ $paragraph-inner-spacing-bottom-lg: 35px;
 @media #{$breakpoint-tablet-and-up} {}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {
-
-  .paragraph--type--banner {
-
-    .paragraph__inner {
-      padding-top: $paragraph-inner-spacing-top-sm;
-      padding-bottom: $paragraph-inner-spacing-bottom-sm;
-    }
-  }
-}
+@media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@media #{$breakpoint-desktop-and-up} {
-
-  .paragraph--type--simple-text {
-
-    .field--name-field-heading {}
-
-    .field--name-field-subheading {}
-
-    .field--name-field-body {}
-  }
-
-  .field--name-field-paragraphs-wide {
-
-    > .field--item {
-
-      + .field--item {
-
-        .paragraph--type--simple-text {
-          margin-top: ((0 - ($grid-gutter-width * 2)) / 2);
-        }
-      }
-    }
-  }
-}
+@media #{$breakpoint-desktop-and-up} {}
 
 // Desktop - only
 @media #{$breakpoint-desktop-only} {
 
-  .paragraph--type--simple-text {
-
-    .paragraph__inner {
-      padding-top: $paragraph-inner-spacing-top-md;
-      padding-bottom: $paragraph-inner-spacing-bottom-md;
-    }
+  .paragraph--type--simple-text,
+  .paragraph--type--simple-text-2-columns {
+    padding-top: $paragraph-inner-spacing-top-md;
+    padding-bottom: $paragraph-inner-spacing-bottom-md;
   }
 }
 
 // Large desktop - and up
 @media #{$breakpoint-large-desktop-and-up} {
 
-  .paragraph--type--simple-text {
-
-    .paragraph__inner {
-      padding-top: $paragraph-inner-spacing-top-lg;
-      padding-bottom: $paragraph-inner-spacing-bottom-lg;
-    }
+  .paragraph--type--simple-text,
+  .paragraph--type--simple-text-2-columns {
+    padding-top: $paragraph-inner-spacing-top-lg;
+    padding-bottom: $paragraph-inner-spacing-bottom-lg;
   }
 }
 

@@ -1,0 +1,36 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="container container--narrow">
+
+        {# Begin - heading #}
+        {{ content.field_heading }}
+        {# End - heading #}
+
+        <div class="row row--equal-height-columns">
+          <div class="col-xs-12 col-sm-6">
+
+            {# Begin - body #}
+            {{ content.field_body }}
+            {# End - body #}
+
+          </div>
+          <div class="col-xs-12 col-sm-6">
+
+            {# Begin - body #}
+            {{ content.field_body_secondary }}
+            {# End - body #}
+
+          </div>
+        </div>
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

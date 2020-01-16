@@ -1,0 +1,9 @@
+uuid: d98cdbee-e681-49f5-9750-72d8f6827b35
+langcode: da
+status: true
+dependencies: {  }
+id: simple_text_2_columns
+label: 'Simpel tekst (2 kolonner)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

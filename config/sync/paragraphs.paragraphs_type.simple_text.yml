@@ -1,0 +1,9 @@
+uuid: f68a6934-070f-4b6a-839a-70d4e0627034
+langcode: da
+status: true
+dependencies: {  }
+id: simple_text
+label: 'Simpel tekst'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 58744b68-faa0-484b-b7aa-b1ca556a9ffc
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_secondary
+    - paragraphs.paragraphs_type.simple_text_2_columns
+  module:
+    - text
+id: paragraph.simple_text_2_columns.field_body_secondary
+field_name: field_body_secondary
+entity_type: paragraph
+bundle: simple_text_2_columns
+label: 'Indholdstekst (højre)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

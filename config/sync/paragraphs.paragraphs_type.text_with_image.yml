@@ -1,0 +1,9 @@
+uuid: 31a10cfc-ac5c-4507-9479-f6e3dd3290a4
+langcode: da
+status: true
+dependencies: {  }
+id: text_with_image
+label: 'Tekst m. billede'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
