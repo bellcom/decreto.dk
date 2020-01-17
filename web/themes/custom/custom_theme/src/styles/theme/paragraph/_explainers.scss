@@ -1,0 +1,159 @@
+// |--------------------------------------------------------------------------
+// | Explainer
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .paragraph--type--explainer
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+$paragraph-explainer-hang-outside: 94px;
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin paragraphs-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.paragraph--type--explainer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  color: #fff;
+  background-color: $brand-primary;
+
+  .field--name-field-heading {
+    margin-bottom: 50px;
+
+    .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $font-size-h2;
+
+      color: #FEC3A8;
+    }
+  }
+
+  .field--name-field-image {
+
+    img {
+      margin: auto;
+    }
+  }
+
+  // Tiny slider.
+  .tns-ovh {
+    overflow: unset !important;
+  }
+  .tns-outer {
+    position: relative;
+  }
+  .tns-nav {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding-top: 35px;
+
+    text-align: center;
+
+    button {
+      width: 12px;
+      height: 12px;
+
+      padding: 0;
+      margin: 0 6px;
+
+      border: 0;
+      border-radius: 100%;
+
+      background-color: #D95B21;
+
+      &.tns-nav-active {
+        background-color: #FB9769;
+      }
+    }
+  }
+
+  .tns-item {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+  }
+
+  button[data-action="start"],
+  button[data-action="stop"],
+  .tns-controls {
+    display: none;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {
+
+  .paragraph--type--explainer {
+    margin-top: $paragraph-explainer-hang-outside + $grid-gutter-width;
+  }
+}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {
+
+  .paragraph--type--explainer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {
+
+  .paragraph--type--explainer {
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    .field--name-field-image {
+
+      img {
+        margin-top: 0 - (100px + $paragraph-explainer-hang-outside);
+        margin-bottom: -80px;
+      }
+    }
+  }
+}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

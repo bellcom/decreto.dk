@@ -21,10 +21,19 @@ jQuery(function ($) {
   $('[data-toggle="tooltip"]').tooltip();
 
   // Testimonials.
-  var slider = tns({
+  tns({
     container: '.testimonials .view-content',
     center: true,
     items: 2,
+    autoplay: true,
+    autoplayHoverPause: true
+  });
+
+  // Explainers.
+  tns({
+    container: '.explainers .view-content',
+    center: true,
+    items: 1,
     autoplay: true,
     autoplayHoverPause: true
   });

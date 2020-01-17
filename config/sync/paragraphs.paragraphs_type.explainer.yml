@@ -3,7 +3,7 @@ langcode: da
 status: true
 dependencies: {  }
 id: explainer
-label: Forklaring
+label: Forklaringer
 icon_uuid: null
 description: ''
 behavior_plugins: {  }
