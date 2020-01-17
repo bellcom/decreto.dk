@@ -46,14 +46,44 @@ $paragraph-banner-box-hang-outside: 40px;
 
   .box {
     max-width: 400px;
+
+
   }
 }
 
-.paragraph--type--banner-1-box {
+.paragraph--type--banner-1-box,
+.paragraph--type--banner-2-boxes {
   padding-top: 30px;
   padding-bottom: 30px;
+}
 
+.paragraph--type--banner-1-box {
   background-image: url("../images/banner-background--1-box.png");
+}
+
+.paragraph--type--banner-2-boxes {
+  background-image: url("../images/banner-background--2-boxes.png");
+
+  .box {
+    text-align: center;
+
+    .field--name-field-box-1-icon,
+    .field--name-field-box-2-icon {
+
+      img {
+        margin: auto;
+      }
+    }
+
+    .field--name-field-box-1-heading,
+    .field--name-field-box-2-heading {
+      padding: 10px 0;
+
+      font-size: $font-size-h3;
+      font-family: $headings-font-family;
+      font-weight: $headings-font-weight;
+    }
+  }
 }
 
 // --------------------------------------------------
@@ -92,7 +122,8 @@ $paragraph-banner-box-hang-outside: 40px;
 // Tablet - only
 @media #{$breakpoint-tablet-only} {
 
-  .paragraph--type--banner-1-box {
+  .paragraph--type--banner-1-box,
+  .paragraph--type--banner-2-boxes {
     padding-top: 50px;
     padding-bottom: 50px;
 
@@ -105,7 +136,8 @@ $paragraph-banner-box-hang-outside: 40px;
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
-  .paragraph--type--banner-1-box {
+  .paragraph--type--banner-1-box,
+  .paragraph--type--banner-2-boxes {
     padding-top: 70px;
     padding-bottom: 70px;
 
