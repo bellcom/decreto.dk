@@ -28,6 +28,20 @@
   background-color: transparent;
 }
 
+.path-frontpage {
+
+  &:not(.user-logged-in) {
+
+    .flexy-header--static {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
