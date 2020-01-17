@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | Testimonials
+// | Testimonial
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .paragraph--type--testimonials
+// | - .testimonial
 // |
 
 // --------------------------------------------------
@@ -20,57 +20,76 @@
 // Styling
 // --------------------------------------------------
 
-.paragraph--type--testimonials {
-  padding-top: 15px;
-  padding-bottom: 15px;
+.testimonial {
+  min-height: 270px;
+}
+
+.testimonial__meta {
+  display: flex;
+
+  align-items: center;
+
+  + .testimonial__body {
+    margin-top: $grid-gutter-width;
+  }
+}
+
+.testimonial__satisfaction {
+  flex-shrink: 1;
+  flex-grow: 0;
+
+  padding-left: 3px;
+  padding-right: 15px;
+
+  text-align: center;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight-bold;
+
+  color: $brand-secondary;
+}
+.testimonial__satisfaction-circle {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 100%;
+  border: 3px solid $brand-secondary;
+
+  + .testimonial__satisfaction-text {
+    margin-top: 3px;
+  }
+}
+.testimonial__satisfaction-text {
+  font-size: 10px;
+}
+
+.testimonial__data {
+  flex-grow: 1;
 
   .field--name-field-heading {
-    margin-bottom: 50px;
+    margin-bottom: 10px !important;
 
-    text-align: center;
-  }
+    text-align: left !important;
 
-  // Tiny slider.
-  .tns-outer {
-    position: relative;
-  }
-  .tns-nav {
-    position: absolute;
-
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    padding-top: 50px;
-
-    text-align: center;
-
-    button {
-      width: 12px;
-      height: 12px;
-
-      padding: 0;
-      margin: 0 6px;
-
-      border: 0;
-      border-radius: 100%;
-
-      background-color: $brand-secondary;
-
-      &.tns-nav-active {
-        background-color: #AAD6CF;
-      }
+    .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $font-size-h4;
     }
   }
 
-  .tns-item {
-    padding-left: $grid-gutter-width / 2;
-    padding-right: $grid-gutter-width / 2;
+  .field--name-field-name,
+  .field--name-field-job-position {
+    display: inline-block;
   }
 
-  button[data-action="stop"],
-  .tns-controls {
-    display: none;
+  .field--name-field-job-position {
+    color: $text-color-secondary;
   }
 }
 
@@ -92,22 +111,10 @@
 @media #{$breakpoint-tablet-and-up} {}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {
-
-  .paragraph--type--testimonials {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
+@media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@media #{$breakpoint-desktop-and-up} {
-
-  .paragraph--type--testimonials {
-    padding-top: 100px;
-    padding-bottom: 140px;
-  }
-}
+@media #{$breakpoint-desktop-and-up} {}
 
 // Desktop - only
 @media #{$breakpoint-desktop-only} {}

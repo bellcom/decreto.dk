@@ -7,19 +7,16 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div class="container">
 
-        {# Begin - heading #}
-        {{ content.field_heading }}
-        {# End - heading #}
+      {# Begin - heading #}
+      {{ content.field_heading }}
+      {# End - heading #}
 
-        <!-- Begin - embedded view -->
-        <div>
-          {{ content.embedded_view }}
-        </div>
-        <!-- End - embedded view -->
-
+      <!-- Begin - embedded view -->
+      <div class="testimonials">
+        {{ content.embedded_view }}
       </div>
+      <!-- End - embedded view -->
 
     {% endblock %}
   </div>

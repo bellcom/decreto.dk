@@ -1,0 +1,59 @@
+uuid: 548e23bf-e4fb-45ac-94f3-371c5a3431e1
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.testimonial_item
+    - field.field.simple_elements.testimonial_item.field_body
+    - field.field.simple_elements.testimonial_item.field_heading
+    - field.field.simple_elements.testimonial_item.field_job_position
+    - field.field.simple_elements.testimonial_item.field_name
+    - field.field.simple_elements.testimonial_item.field_satisfaction_level
+  module:
+    - text
+id: simple_elements.testimonial_item.default
+targetEntityType: simple_elements
+bundle: testimonial_item
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_job_position:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_satisfaction_level:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

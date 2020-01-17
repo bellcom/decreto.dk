@@ -1,0 +1,9 @@
+uuid: 0ceb3b86-332e-45d5-a852-bd639738e8a7
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.simple_elements
+name: 'Udtalelse (enkelt)'
+type: testimonial_item
+description: ''

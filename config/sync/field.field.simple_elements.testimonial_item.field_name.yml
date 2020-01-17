@@ -1,0 +1,19 @@
+uuid: f7a4d838-025c-429a-8f90-10ff2d04b82b
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.testimonial_item
+    - field.storage.simple_elements.field_name
+id: simple_elements.testimonial_item.field_name
+field_name: field_name
+entity_type: simple_elements
+bundle: testimonial_item
+label: Navn
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

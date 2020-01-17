@@ -1,0 +1,21 @@
+uuid: 0752f553-db7e-45b3-8c27-7aad415dc96f
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonials.field_heading
+    - paragraphs.paragraphs_type.testimonials
+id: paragraph.testimonials.default
+targetEntityType: paragraph
+bundle: testimonials
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

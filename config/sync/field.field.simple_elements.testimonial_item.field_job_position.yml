@@ -1,0 +1,19 @@
+uuid: bd197e1e-a596-47b7-9fe6-f8e918708993
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.testimonial_item
+    - field.storage.simple_elements.field_job_position
+id: simple_elements.testimonial_item.field_job_position
+field_name: field_job_position
+entity_type: simple_elements
+bundle: testimonial_item
+label: 'Stilling og virksomhed'
+description: 'Eks. "HR leder i Mershery Agency"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

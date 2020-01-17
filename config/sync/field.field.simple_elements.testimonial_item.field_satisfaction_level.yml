@@ -1,0 +1,19 @@
+uuid: b235ad53-8e9e-46e1-b2cc-e96c3b1b5d0b
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.testimonial_item
+    - field.storage.simple_elements.field_satisfaction_level
+id: simple_elements.testimonial_item.field_satisfaction_level
+field_name: field_satisfaction_level
+entity_type: simple_elements
+bundle: testimonial_item
+label: 'Tilfredshed (%)'
+description: 'Eks. "35%"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

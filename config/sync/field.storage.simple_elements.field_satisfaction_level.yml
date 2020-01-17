@@ -1,0 +1,21 @@
+uuid: 6845d44a-6dd6-43f4-9811-498fc5d982c1
+langcode: da
+status: true
+dependencies:
+  module:
+    - eck
+id: simple_elements.field_satisfaction_level
+field_name: field_satisfaction_level
+entity_type: simple_elements
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

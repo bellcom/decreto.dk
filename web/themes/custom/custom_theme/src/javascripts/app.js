@@ -19,4 +19,13 @@ jQuery(function ($) {
 
   // Enable tooltips.
   $('[data-toggle="tooltip"]').tooltip();
+
+  // Testimonials.
+  var slider = tns({
+    container: '.testimonials .view-content',
+    center: true,
+    items: 2,
+    autoplay: true,
+    autoplayHoverPause: true
+  });
 });

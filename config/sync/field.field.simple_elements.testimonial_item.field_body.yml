@@ -1,0 +1,21 @@
+uuid: 50b58873-5603-4b1e-8193-d6480a90a448
+langcode: da
+status: true
+dependencies:
+  config:
+    - eck.eck_type.simple_elements.testimonial_item
+    - field.storage.simple_elements.field_body
+  module:
+    - text
+id: simple_elements.testimonial_item.field_body
+field_name: field_body
+entity_type: simple_elements
+bundle: testimonial_item
+label: Indholdstekst
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,27 @@
+<div{{ attributes.addClass('testimonial box box--secondary') }}>
+  <div class="testimonial__meta">
+    <div class="testimonial__satisfaction">
+      <div class="testimonial__satisfaction-circle">
+        {{ content.field_satisfaction_level }}
+      </div>
+
+      <div class="testimonial__satisfaction-text">
+        {{ 'tilfredshed' | trans }}
+      </div>
+    </div>
+
+    <div class="testimonial__data">
+      <div>
+        {{ content.field_heading }}
+      </div>
+
+      <div>
+        {{ content.field_name }} - {{ content.field_job_position }}
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial__body">
+    {{ content.field_body }}
+  </div>
+</div>

@@ -1,0 +1,21 @@
+uuid: 45f60b2b-79fa-4890-bdb4-18d7de9e84ae
+langcode: da
+status: true
+dependencies:
+  module:
+    - eck
+id: simple_elements.field_name
+field_name: field_name
+entity_type: simple_elements
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
