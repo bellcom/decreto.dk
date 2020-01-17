@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | Webform
+// | Banner
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .paragraph--type--box-with-background-image
+// | - .paragraph--type--banner
 // |
 
 // --------------------------------------------------
@@ -20,10 +20,11 @@
 // Styling
 // --------------------------------------------------
 
-.paragraph--type--box-with-background-image {
+.paragraph--type--banner-1-box {
   padding-top: 30px;
   padding-bottom: 30px;
 
+  background-image: url("../images/banner-background--1-box.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,6 +33,20 @@
 
   .box {
     max-width: 400px;
+  }
+
+  .field--name-field-body {
+
+    + .field--name-field-link {
+      margin-top: $grid-gutter-width;
+    }
+  }
+
+  .field--name-field-link {
+
+    a {
+      @extend .btn-primary;
+    }
   }
 }
 
@@ -52,15 +67,10 @@
 // Tablet - and up
 @media #{$breakpoint-tablet-and-up} {
 
-  .paragraph--type--box-with-background-image {
+  .paragraph--type--banner-1-box {
 
-    &.paragraph--box-position-left {}
-
-    &.paragraph--box-position-right {
-
-      .box {
-        margin-left: auto;
-      }
+    .content-wrapper {
+      justify-content: center;
     }
   }
 }
@@ -68,7 +78,7 @@
 // Tablet - only
 @media #{$breakpoint-tablet-only} {
 
-  .paragraph--type--box-with-background-image {
+  .paragraph--type--banner-1-box {
     padding-top: 50px;
     padding-bottom: 50px;
 
@@ -79,16 +89,16 @@
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
-  .paragraph--type--box-with-background-image {
-    padding-top: 90px;
-    padding-bottom: 90px;
+  .paragraph--type--banner-1-box {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
 // Desktop - only
 @media #{$breakpoint-desktop-only} {
 
-  .paragraph--type--box-with-background-image {
+  .paragraph--type--banner-1-box {
     min-height: 400px;
   }
 }
@@ -96,8 +106,8 @@
 // Large desktop - and up
 @media #{$breakpoint-large-desktop-and-up} {
 
-  .paragraph--type--box-with-background-image {
-    min-height: 450px;
+  .paragraph--type--banner-1-box {
+    min-height: 400px;
   }
 }
 

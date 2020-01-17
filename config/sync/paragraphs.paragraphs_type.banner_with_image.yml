@@ -3,7 +3,7 @@ langcode: da
 status: true
 dependencies: {  }
 id: banner_with_image
-label: 'Banner (m. billede)'
+label: 'Banner (sikkerhed)'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }
