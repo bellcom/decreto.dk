@@ -184,6 +184,10 @@ $paragraph-banner-box-hang-outside: 40px;
   .paragraph--type--banner-large {
     margin-bottom: $paragraph-banner-box-hang-outside * 2;
 
+    .field--name-field-heading {
+      max-width: 70%;
+    }
+
     .image-out-of-bounds-wrapper {
 
       img {
