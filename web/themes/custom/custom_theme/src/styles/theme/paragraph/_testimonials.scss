@@ -68,6 +68,7 @@
     padding-right: $grid-gutter-width / 2;
   }
 
+  button[data-action="start"],
   button[data-action="stop"],
   .tns-controls {
     display: none;
