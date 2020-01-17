@@ -1,0 +1,37 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="container">
+        <div>
+
+          {# Begin - heading #}
+          {{ content.field_heading }}
+          {# End - heading #}
+
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+
+            {# Begin - body #}
+            {{ content.field_body }}
+            {# End - body #}
+
+            {# Begin - link #}
+            {{ content.field_link }}
+            {# End - link #}
+
+          </div>
+          <div class="col-xs-12 col-sm-6 image-out-of-bounds-wrapper">
+            <img src="{{ base_path ~ directory }}/dist/images/laptop.svg">
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
