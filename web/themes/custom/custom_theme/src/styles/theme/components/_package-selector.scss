@@ -1,0 +1,173 @@
+// |--------------------------------------------------------------------------
+// | Package selector
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .package-selector
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin webform-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.package-selector {
+  display: block;
+
+  margin-bottom: 0;
+  padding: 13px 16px;
+
+  text-transform: initial;
+
+  border-bottom: 2px solid $border-color;
+
+  cursor: hand;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &.highlighted {
+    border-radius: $border-radius-base;
+
+    background-color: $body-bg-secondary;
+
+    .package-selector__name,
+    .package-selector__description {
+      color: $text-color;
+    }
+  }
+
+  &.package-selector--no-border {
+    border-bottom: 0;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+.package-selector__row {
+  display: flex;
+  position: relative;
+
+  align-items: center;
+
+  + .package-selector__details {
+    margin-top: 10px;
+  }
+}
+
+.package-selector__checkmark {
+  position: relative;
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 100%;
+  border: 2px solid $brand-tertiary;
+
+  input:checked ~ &:after {
+    position: absolute;
+    display: inline-block;
+
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+
+    content: "";
+
+    border-radius: 100%;
+    background-color: $brand-tertiary;
+  }
+
+  + .package-selector__name {
+    margin-left: 10px;
+  }
+}
+
+.package-selector__name {
+  font-size: $font-size-h4;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight-bold;
+  text-transform: initial;
+
+  color: $brand-secondary;
+}
+.package-selector__description {
+  flex-grow: 1;
+
+  margin-left: 10px;
+
+  font-weight: $font-weight;
+  text-transform: initial;
+}
+.package-selector__price {
+  font-size: $font-size-h4;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight-bold;
+  text-transform: initial;
+
+  color: $text-color;
+}
+
+.package-selector__details {
+  padding-left: 30px;
+
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight;
+  line-height: 2;
+
+  color: $text-color-secondary;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

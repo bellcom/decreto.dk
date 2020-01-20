@@ -1,17 +1,17 @@
-uuid: 43ffd074-4e04-4a19-be3e-6bc8cb76732c
+uuid: bba0d70b-ffc2-4a26-98e1-397c7ca06ca9
 langcode: da
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_link_button
+    - field.storage.paragraph.field_link_text
     - paragraphs.paragraphs_type.package_chooser
   module:
     - link
-id: paragraph.package_chooser.field_link_button
-field_name: field_link_button
+id: paragraph.package_chooser.field_link_text
+field_name: field_link_text
 entity_type: paragraph
 bundle: package_chooser
-label: 'Link (knap)'
+label: 'Link (tekst)'
 description: ''
 required: false
 translatable: false

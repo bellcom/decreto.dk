@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.package_chooser.field_heading
     - field.field.paragraph.package_chooser.field_link
-    - field.field.paragraph.package_chooser.field_link_button
+    - field.field.paragraph.package_chooser.field_link_text
     - field.field.paragraph.package_chooser.field_subheading
     - paragraphs.paragraphs_type.package_chooser
   module:
@@ -31,8 +31,8 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_link_button:
-    weight: 3
+  field_link_text:
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''

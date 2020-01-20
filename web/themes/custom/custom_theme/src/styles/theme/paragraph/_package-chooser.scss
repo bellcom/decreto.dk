@@ -25,9 +25,55 @@
   padding-bottom: 15px;
 
   .field--name-field-heading {
-    margin-bottom: 50px;
-
     text-align: center;
+
+    + .field--name-field-subheading {
+      margin-top: 50px;
+    }
+
+    + form {
+      margin-top: 40px;
+    }
+  }
+
+  .field--name-field-subheading {
+    text-align: center;
+
+    font-size: $font-size-large;
+
+    color: $text-color-secondary;
+
+    + form {
+      margin-top: 40px;
+    }
+  }
+
+  .form {
+
+    + .field--name-field-link,
+    + .field--name-field-link-text {
+      margin-top: 40px;
+    }
+  }
+
+  .field--name-field-link {
+    text-align: center;
+
+    a {
+      @extend .btn-primary;
+    }
+  }
+
+  .field--name-field-link-text {
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+    }
+
+    + .field--name-field-link {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -61,8 +107,8 @@
 @media #{$breakpoint-desktop-and-up} {
 
   .paragraph--type--package-chooser {
-    padding-top: 100px;
-    padding-bottom: 140px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 

@@ -41,6 +41,11 @@
 // Variants
 // --------------------------------------------------
 
+.box--outline {
+  border-width: 4px;
+  border-style: solid;
+  background-color: $body-bg !important;
+}
 .box--primary {
   color: #fff;
   background-color: $body-bg-primary;
@@ -48,12 +53,24 @@
   a, a:hover, a:focus {
     color: #fff;
   }
+
+  &.box--outline {
+    border-color: $body-bg-primary;
+  }
 }
 .box--secondary {
   background-color: $body-bg-secondary;
+
+  &.box--outline {
+    border-color: $body-bg-secondary;
+  }
 }
 .box--tertiary {
   background-color: $body-bg-tertiary;
+
+  &.box--outline {
+    border-color: $body-bg-tertiary;
+  }
 }
 
 // --------------------------------------------------

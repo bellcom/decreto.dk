@@ -17,6 +17,103 @@
         {{ content.field_subheading }}
         {# End - subheading #}
 
+        <form action="/bestil-demo" method="get">
+          <div class="form">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="box box--outline box--secondary">
+                  <h3>{{ 'Decreto pakker:' | trans }}</h3>
+
+                  <label class="package-selector">
+                    <div class="package-selector__row">
+                      <input type="radio" name="decreto_pakke_du_vaelger" value="forening" />
+                      <div class="package-selector__checkmark"></div>
+                      <div class="package-selector__name">{{ 'Forening' | trans }}</div>
+                      <div class="package-selector__description">{{ '3 brugere' | trans }}</div>
+                      <div class="package-selector__price">{{ '95 kr./md.' | trans }}</div>
+                    </div>
+                  </label>
+
+                  <label class="package-selector">
+                    <div class="package-selector__row">
+                      <input type="radio" name="decreto_pakke_du_vaelger" value="bestyrelse" />
+                      <div class="package-selector__checkmark"></div>
+                      <div class="package-selector__name">{{ 'Bestyrelse' | trans }}</div>
+                      <div class="package-selector__description">{{ '15 brugere' | trans }}</div>
+                      <div class="package-selector__price">{{ '495 kr./md.' | trans }}</div>
+                    </div>
+                  </label>
+
+                  <label class="package-selector">
+                    <div class="package-selector__row">
+                      <input type="radio" name="decreto_pakke_du_vaelger" value="basis" />
+                      <div class="package-selector__checkmark"></div>
+                      <div class="package-selector__name">{{ 'Basis' | trans }}</div>
+                      <div class="package-selector__description">{{ '50 brugere' | trans }}</div>
+                      <div class="package-selector__price">{{ '995 kr./md.' | trans }}</div>
+                    </div>
+                  </label>
+
+                  <label class="package-selector">
+                    <div class="package-selector__row">
+                      <input type="radio" name="decreto_pakke_du_vaelger" value="standard" />
+                      <div class="package-selector__checkmark"></div>
+                      <div class="package-selector__name">{{ 'Standard' | trans }}</div>
+                      <div class="package-selector__description">{{ '100 brugere' | trans }}</div>
+                      <div class="package-selector__price">{{ '1.995 kr./md.' | trans }}</div>
+                    </div>
+                  </label>
+
+                  <label class="package-selector">
+                    <div class="package-selector__row">
+                      <input type="radio" name="decreto_pakke_du_vaelger" value="pro" />
+                      <div class="package-selector__checkmark"></div>
+                      <div class="package-selector__name">{{ 'Pro' | trans }}</div>
+                      <div class="package-selector__description">{{ 'Ubegrænset antal brugere' | trans }}</div>
+                      <div class="package-selector__price">{{ '3.995 kr./md.' | trans }}</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="box box--outline box--secondary">
+                  <h3>{{ 'Prøv Decreto i 1 måned' | trans }}</h3>
+                  <p>{{ 'Bestil gratis 1 måneds prøveperiod for at finde ud af, hvilken pakke virker bedst for dig og din virksomhed.' | trans }}</p>
+
+                  <label class="package-selector package-selector--no-border">
+                    <div class="package-selector__row">
+                      <input type="radio" name="decreto_pakke_du_vaelger" value="demo" />
+                      <div class="package-selector__checkmark"></div>
+                      <div class="package-selector__name">
+                        {{ 'Demo' | trans }}
+                      </div>
+                      <div class="package-selector__description"></div>
+                      <div class="package-selector__price">{{ 'Gratis' | trans }}</div>
+                    </div>
+                    <div class="package-selector__details">
+                      {{ '1 systemansvarlig' | trans }} <br>
+                      {{ '1 superbruger' | trans }} <br>
+                      {{ 'Oprettelse af ubegrænset udvalg' | trans }} <br>
+                      {{ '2 brugere' | trans }} <br>
+                      {{ '1 Gb data' | trans }}
+                    </div>
+                  </label>
+
+                  <p>{{ 'Efter prøveperioden kan du fortsætte med en af pakkerne. ' | trans }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {# Begin - link (text) #}
+          {{ content.field_link_text }}
+          {# End - link (text) #}
+
+          {# Begin - link (button) #}
+          {{ content.field_link }}
+          {# End - link (button) #}
+        </form>
+
       </div>
 
     {% endblock %}
