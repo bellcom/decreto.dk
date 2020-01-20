@@ -1,0 +1,57 @@
+uuid: a6d292c3-a6e6-4c20-82fa-e7acb3a8da96
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.package_chooser.field_heading
+    - field.field.paragraph.package_chooser.field_link
+    - field.field.paragraph.package_chooser.field_link_button
+    - field.field.paragraph.package_chooser.field_subheading
+    - paragraphs.paragraphs_type.package_chooser
+  module:
+    - link
+id: paragraph.package_chooser.default
+targetEntityType: paragraph
+bundle: package_chooser
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_link_button:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_subheading:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: 3d26517b-45ae-490a-ac1b-0ebd63c97b64
+langcode: da
+status: true
+dependencies: {  }
+id: price_table
+label: 'Pris tabel'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

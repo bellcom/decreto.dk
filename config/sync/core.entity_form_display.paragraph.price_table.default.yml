@@ -1,0 +1,34 @@
+uuid: d12b5100-70e8-49e4-9880-a4f0f05bee17
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.price_table.field_body
+    - field.field.paragraph.price_table.field_heading
+    - paragraphs.paragraphs_type.price_table
+  module:
+    - text
+id: paragraph.price_table.default
+targetEntityType: paragraph
+bundle: price_table
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

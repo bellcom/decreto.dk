@@ -1,0 +1,9 @@
+uuid: 662e3598-e362-4ce5-aa30-f6cf1a4e53ff
+langcode: da
+status: true
+dependencies: {  }
+id: package_chooser
+label: Pakkevælger
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

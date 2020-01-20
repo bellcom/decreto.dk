@@ -1,0 +1,23 @@
+uuid: 43ffd074-4e04-4a19-be3e-6bc8cb76732c
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_button
+    - paragraphs.paragraphs_type.package_chooser
+  module:
+    - link
+id: paragraph.package_chooser.field_link_button
+field_name: field_link_button
+entity_type: paragraph
+bundle: package_chooser
+label: 'Link (knap)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

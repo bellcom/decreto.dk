@@ -1,0 +1,21 @@
+uuid: 187f35b4-d91c-4a9d-ac3f-3db29e1e3070
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.price_table
+  module:
+    - text
+id: paragraph.price_table.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: price_table
+label: Indholdstekst
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

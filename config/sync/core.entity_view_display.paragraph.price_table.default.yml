@@ -1,0 +1,31 @@
+uuid: 7a4cdbe3-e0f7-432b-b898-0b7e131fdb3c
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.price_table.field_body
+    - field.field.paragraph.price_table.field_heading
+    - paragraphs.paragraphs_type.price_table
+  module:
+    - text
+id: paragraph.price_table.default
+targetEntityType: paragraph
+bundle: price_table
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

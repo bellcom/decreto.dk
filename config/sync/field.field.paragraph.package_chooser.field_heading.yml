@@ -1,0 +1,19 @@
+uuid: a010f44d-5324-4b4d-966c-a3c0518efa18
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.package_chooser
+id: paragraph.package_chooser.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: package_chooser
+label: Overskrift
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
