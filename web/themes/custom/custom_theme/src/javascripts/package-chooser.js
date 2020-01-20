@@ -27,7 +27,7 @@
 
   // Add eventListeners.
   var buttons = document.querySelectorAll('.paragraph--type--package-chooser .field--name-field-link a');
-  var radios = document.querySelectorAll('.paragraph--type--package-chooser input[name="package"]');
+  var radios = document.querySelectorAll('.paragraph--type--package-chooser input[name="decreto_pakke_du_vaelger"]');
 
   // Buttons.
   for (var i = 0; i < buttons.length; i++) {
