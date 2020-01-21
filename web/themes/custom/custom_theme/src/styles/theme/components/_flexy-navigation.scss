@@ -35,12 +35,15 @@
   a.order,
   a.sign-in {
     @extend .btn;
+    @extend .btn-sm;
 
     margin-left: 5px;
     margin-right: 5px;
 
     padding-left: $padding-base-horizontal !important;
     padding-right: $padding-base-horizontal !important;
+
+    font-size: $font-size-base;
   }
 
   a.order {
@@ -49,6 +52,16 @@
 
   a.sign-in {
     @extend .btn-secondary;
+
+    &:before {
+      float: left;
+
+      content: "person";
+      font-family: "Material Icons";
+      font-size: 22px;
+
+      margin-right: 2px;
+    }
   }
 }
 
