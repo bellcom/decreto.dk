@@ -35,6 +35,35 @@
 
     font-size: $font-size-h3;
   }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+
+      padding: 3px 0;
+
+      align-items: center;
+    }
+
+    li:before {
+      content: "arrow_forward";
+
+      font-family: "Material Icons";
+      font-size: $font-size-large;
+
+      margin-left: -20px;
+      margin-right: 10px;
+    }
+  }
+
+  ul, p {
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // --------------------------------------------------
@@ -44,6 +73,7 @@
 .box--outline {
   border-width: 4px;
   border-style: solid;
+
   background-color: $body-bg !important;
 }
 .box--primary {
@@ -56,6 +86,20 @@
 
   &.box--outline {
     border-color: $body-bg-primary;
+
+    ul {
+
+      li:before {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  ul {
+
+    li:before {
+      color: #fff;
+    }
   }
 }
 .box--secondary {
@@ -63,6 +107,20 @@
 
   &.box--outline {
     border-color: $body-bg-secondary;
+
+    ul {
+
+      li:before {
+        color: $brand-secondary;
+      }
+    }
+  }
+
+  ul {
+
+    li:before {
+      color: $brand-secondary;
+    }
   }
 }
 .box--tertiary {
@@ -70,6 +128,20 @@
 
   &.box--outline {
     border-color: $body-bg-tertiary;
+
+    ul {
+
+      li:before {
+        color: $brand-tertiary;
+      }
+    }
+  }
+
+  ul {
+
+    li:before {
+      color: #fff;
+    }
   }
 }
 
