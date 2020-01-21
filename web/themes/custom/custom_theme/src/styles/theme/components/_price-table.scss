@@ -1,0 +1,143 @@
+// |--------------------------------------------------------------------------
+// | Price table
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .price-table
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin price-table-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.price-table {
+  width: 100%;
+  max-width: 100%;
+
+  border-spacing: 2px;
+  border-collapse: separate;
+
+  > thead,
+  > tbody,
+  > tfoot {
+
+    > tr {
+
+      > th,
+      > td {
+        padding: 12px 20px;
+        line-height: $line-height-base;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.price-table__spacer {
+  padding: 0 !important;
+  border-spacing: 0;
+
+  width: 5px;
+}
+
+.price-table__head {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+.price-table__foot {
+  font-weight: $font-weight-bold;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// Default.
+.price-table__head,
+.price-table__data,
+.price-table__foot {
+  background-color: #FBFBFB;
+}
+.price-table__head {
+  color: #bdbdbd;
+}
+.price-table__data,
+.price-table__foot {
+  color: $text-color-secondary;
+}
+
+// Primary.
+.price-table__head--primary,
+.price-table__data--primary,
+.price-table__foot--primary {
+  text-align: center;
+
+  background-color: #F7F7F7;
+}
+.price-table__head--primary {
+  color: $brand-primary;
+}
+.price-table__data--primary,
+.price-table__foot--primary {
+  color: $text-color;
+}
+
+// Secondary.
+.price-table__head--secondary,
+.price-table__data--secondary,
+.price-table__foot--secondary {
+  text-align: center;
+
+  background-color: rgba(#AAD8CF, .2);
+}
+.price-table__head--secondary {
+  color: $brand-secondary;
+}
+.price-table__data--secondary,
+.price-table__foot--secondary {
+  color: $text-color;
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

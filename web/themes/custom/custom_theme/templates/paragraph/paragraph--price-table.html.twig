@@ -17,6 +17,95 @@
         {{ content.field_body }}
         {# End - body #}
 
+        <table class="price-table">
+          <thead>
+          <tr>
+            <th class="price-table__head">{{ 'Muligheder' | trans }}</th>
+            <th class="price-table__spacer"></th>
+            <th class="price-table__head price-table__data--first price-table__head--primary">{{ 'Forening' | trans }}</th>
+            <th class="price-table__head price-table__data--last price-table__head--primary">{{ 'Bestyrelse' | trans }}</th>
+            <th class="price-table__spacer"></th>
+            <th class="price-table__head price-table__head--secondary">{{ 'Basis' | trans }}</th>
+            <th class="price-table__head price-table__head--secondary">{{ 'Standard' | trans }}</th>
+            <th class="price-table__head price-table__head--secondary">{{ 'Professionel' | trans }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="price-table__data">{{ 'Oprettelse af 1 systemansvarlig' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--first price-table__data--primary ">+</td>
+            <td class="price-table__data price-table__data--last price-table__data--primary">+</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--secondary">+</td>
+            <td class="price-table__data price-table__data--secondary">+</td>
+            <td class="price-table__data price-table__data--secondary">+</td>
+          </tr>
+          <tr>
+            <td class="price-table__data">{{ 'Superbrugere' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--first price-table__data--primary">1</td>
+            <td class="price-table__data price-table__data--last price-table__data--primary">2</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--secondary">5</td>
+            <td class="price-table__data price-table__data--secondary">10</td>
+            <td class="price-table__data price-table__data--secondary">20</td>
+          </tr>
+          <tr>
+            <td class="price-table__data">{{ 'Brugere' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--primary">3</td>
+            <td class="price-table__data price-table__data--primary">15</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--secondary">50</td>
+            <td class="price-table__data price-table__data--secondary">100</td>
+            <td class="price-table__data price-table__data--secondary">{{ 'Ubegrænset' | trans }}</td>
+          </tr>
+          <tr>
+            <td class="price-table__data">{{ 'Support' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--primary">-</td>
+            <td class="price-table__data price-table__data--primary">{{ 'mail' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--secondary">{{ 'mail' | trans }}</td>
+            <td class="price-table__data price-table__data--secondary">{{ 'mail' | trans }}</td>
+            <td class="price-table__data price-table__data--secondary">{{ 'telefon og mail' | trans }}</td>
+          </tr>
+          <tr>
+            <td class="price-table__data">{{ 'Data' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--primary">2 GB.</td>
+            <td class="price-table__data price-table__data--primary">{{ 'Ubegrænset' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--secondary">{{ 'Ubegrænset' | trans }}</td>
+            <td class="price-table__data price-table__data--secondary">{{ 'Ubegrænset' | trans }}</td>
+            <td class="price-table__data price-table__data--secondary">{{ 'Ubegrænset' | trans }}</td>
+          </tr>
+          <tr>
+            <td class="price-table__data">{{ 'Oprettelse pr. organisation' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--primary">995 kr.</td>
+            <td class="price-table__data price-table__data--primary">995 kr.</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__data price-table__data--secondary">995 kr.</td>
+            <td class="price-table__data price-table__data--secondary">995 kr.</td>
+            <td class="price-table__data price-table__data--secondary">995 kr.</td>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <td class="price-table__foot">{{ 'Månedlig betaling' | trans }}</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__foot price-table__foot--primary">95 kr.</td>
+            <td class="price-table__foot price-table__foot--primary">495 kr.</td>
+            <td class="price-table__spacer"></td>
+            <td class="price-table__foot price-table__foot--secondary">995 kr.</td>
+            <td class="price-table__foot price-table__foot--secondary">1.995 kr.</td>
+            <td class="price-table__foot price-table__foot--secondary">3.995 kr.</td>
+          </tr>
+          </tfoot>
+        </table>
+
       </div>
 
     {% endblock %}

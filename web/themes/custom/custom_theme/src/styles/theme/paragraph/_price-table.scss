@@ -25,9 +25,19 @@
   padding-bottom: 15px;
 
   .field--name-field-heading {
-    margin-bottom: 50px;
-
     text-align: center;
+
+    + .field--name-field-body,
+    + .price-table {
+      margin-top: 50px;
+    }
+  }
+
+  .field--name-field-body {
+
+    + .price-table {
+      margin-top: 50px;
+    }
   }
 }
 
@@ -52,8 +62,8 @@
 @media #{$breakpoint-tablet-only} {
 
   .paragraph--type--price-table {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 }
 
@@ -61,8 +71,8 @@
 @media #{$breakpoint-desktop-and-up} {
 
   .paragraph--type--price-table {
-    padding-top: 100px;
-    padding-bottom: 140px;
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
 }
 
