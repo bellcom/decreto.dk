@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.field.paragraph.info_boxes.field_heading
     - field.field.paragraph.info_boxes.field_info_boxes
+    - field.field.paragraph.info_boxes.field_link
     - paragraphs.paragraphs_type.info_boxes
+  module:
+    - link
 id: paragraph.info_boxes.default
 targetEntityType: paragraph
 bundle: info_boxes
@@ -27,5 +30,17 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden: {  }

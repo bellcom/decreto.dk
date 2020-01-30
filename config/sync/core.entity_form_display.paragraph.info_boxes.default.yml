@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.info_boxes.field_heading
     - field.field.paragraph.info_boxes.field_info_boxes
+    - field.field.paragraph.info_boxes.field_link
     - paragraphs.paragraphs_type.info_boxes
   module:
     - inline_entity_form
+    - link
 id: paragraph.info_boxes.default
 targetEntityType: paragraph
 bundle: info_boxes
@@ -36,6 +38,14 @@ content:
       allow_duplicate: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true

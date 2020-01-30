@@ -1,7 +1,7 @@
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://decreto-web.docksal/themes/custom/custom_theme/favicon.ico'
+  url: 'http://decretoweb.bellcom.dk/themes/custom/custom_theme/favicon.ico'
   use_default: 1
 schemas:
   bootstrap: 8000
@@ -18,7 +18,10 @@ logo:
   use_default: 1
 table_responsive: '-1'
 region_wells:
+  sidr_left__primary: ''
   sidr_right__primary: ''
+  flexy_navigation__primary: ''
+  flexy_navigation__secondary: ''
   highlighted: ''
   help: ''
   content: ''
@@ -39,9 +42,9 @@ phone_readable: '70 26 00 85'
 email: ''
 working_hours: 'Man-fre: 09:00 - 17:00'
 facebook: 1
-facebook_url: 'http://facebook.com'
+facebook_url: 'https://www.facebook.com/decreto-102328551321634'
 facebook_tooltip: 'Besøg os på facebook'
-twitter: 1
+twitter: 0
 twitter_url: 'http://facebook.com'
 twitter_tooltip: 'Besøg os på Twitter'
 googleplus: 0
@@ -51,7 +54,7 @@ instagram: 0
 instagram_url: ''
 instagram_tooltip: ''
 linkedin: 1
-linkedin_url: 'http://facebook.com'
+linkedin_url: 'https://www.linkedin.com/company/decreto/'
 linkedin_tooltip: 'Besøg os på LinkedIn'
 pinterest: 0
 pinterest_url: ''
@@ -59,9 +62,9 @@ pinterest_tooltip: ''
 vimeo: 0
 vimeo_url: ''
 vimeo_tooltip: ''
-youtube: 0
-youtube_url: ''
-youtube_tooltip: ''
+youtube: 1
+youtube_url: 'https://www.youtube.com/channel/UCSrngQHIaTA_n3Y0Q-kyyLA/'
+youtube_tooltip: 'Besøg os på YouTube'
 github: 0
 github_url: ''
 github_tooltip: ''
