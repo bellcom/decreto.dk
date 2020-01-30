@@ -27,6 +27,21 @@
   .field--name-field-heading {
     margin-bottom: 30px;
   }
+
+  .info-boxes {
+
+    + .field--name-field-link {
+      margin-top: $grid-gutter-width;
+    }
+  }
+
+  .field--name-field-link {
+    text-align: center;
+
+    a {
+      @extend .btn-tertiary;
+    }
+  }
 }
 
 // --------------------------------------------------
@@ -61,7 +76,7 @@
 
   .paragraph--type--info-boxes {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
 }
 
@@ -70,7 +85,14 @@
 
   .paragraph--type--info-boxes {
     padding-top: 45px;
-    padding-bottom: 45px;
+    padding-bottom: 60px;
+
+    .info-boxes {
+
+      + .field--name-field-link {
+        margin-top: $grid-gutter-width * 2;
+      }
+    }
   }
 }
 
