@@ -24,7 +24,7 @@
   display: block;
 
   margin-bottom: 0;
-  padding: 13px 16px;
+  padding: 8px 5px;
 
   text-transform: initial;
 
@@ -149,7 +149,12 @@
 @media #{$breakpoint-mobile-only} {}
 
 // Tablet - and up
-@media #{$breakpoint-tablet-and-up} {}
+@media #{$breakpoint-tablet-and-up} {
+
+  .package-selector {
+    padding: 13px 16px;
+  }
+}
 
 // Tablet - only
 @media #{$breakpoint-tablet-only} {}

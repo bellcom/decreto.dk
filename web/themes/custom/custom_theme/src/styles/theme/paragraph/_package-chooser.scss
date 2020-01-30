@@ -21,8 +21,8 @@
 // --------------------------------------------------
 
 .paragraph--type--package-chooser {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   .field--name-field-heading {
     text-align: center;
@@ -89,19 +89,22 @@
 @media #{$breakpoint-mobile-and-up} {}
 
 // Mobile - only
-@media #{$breakpoint-mobile-only} {}
+@media #{$breakpoint-mobile-only} {
+
+  .paragraph--type--package-chooser {
+
+    .box {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
 
 // Tablet - and up
 @media #{$breakpoint-tablet-and-up} {}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {
-
-  .paragraph--type--package-chooser {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
+@media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {

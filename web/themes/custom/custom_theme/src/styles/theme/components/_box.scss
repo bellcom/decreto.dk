@@ -24,7 +24,7 @@
 // --------------------------------------------------
 
 .box {
-  padding: 50px;
+  padding: 15px;
 
   border-radius: $border-radius-large;
   background-color: $body-bg-secondary;
@@ -162,7 +162,12 @@
 @media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@media #{$breakpoint-desktop-and-up} {}
+@media #{$breakpoint-desktop-and-up} {
+
+  .box {
+    padding: 50px;
+  }
+}
 
 // Desktop - only
 @media #{$breakpoint-desktop-only} {}

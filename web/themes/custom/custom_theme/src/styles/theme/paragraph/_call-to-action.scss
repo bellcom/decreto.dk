@@ -21,8 +21,8 @@
 // --------------------------------------------------
 
 .paragraph--type--call-to-action {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 
   .field--name-field-heading {
     display: block;
@@ -86,22 +86,10 @@
 }
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {
-
-  .paragraph--type--call-to-action {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
+@media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@media #{$breakpoint-desktop-and-up} {
-
-  .paragraph--type--call-to-action {
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-}
+@media #{$breakpoint-desktop-and-up} {}
 
 // Desktop - only
 @media #{$breakpoint-desktop-only} {}
