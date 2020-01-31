@@ -23,6 +23,10 @@
 .webform-submission-form {
 
   .form-control {}
+  select.form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   .form-actions {
     margin-top: 50px;
@@ -38,42 +42,46 @@
   .fieldset-legend {
     @extend label;
   }
+
+  .panel {
+    border: 0;
+
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .panel-heading {
+    padding: 0;
+    border: 0;
+
+    background-color: transparent;
+
+    + .panel-body {
+      margin-top: $grid-gutter-width / 2;
+    }
+  }
+  .panel-title {
+    font-size: $font-size-large;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight-bold;
+
+    color: $headings-color;
+  }
+  .panel-body {
+    padding: 0;
+  }
+
+  .form-type-checkbox {
+    padding-left: 30px;
+
+    label {
+      font-size: $font-size-base;
+      font-weight: bold;
+    }
+
+    .help-block {
+      padding-left: 19px;
+
+      font-size: $font-size-extra-small;
+    }
+  }
 }
-
-// --------------------------------------------------
-// Variants
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Responsive
-// --------------------------------------------------
-
-// Mobile - and up
-@media #{$breakpoint-mobile-and-up} {}
-
-// Mobile - only
-@media #{$breakpoint-mobile-only} {}
-
-// Tablet - and up
-@media #{$breakpoint-tablet-and-up} {}
-
-// Tablet - only
-@media #{$breakpoint-tablet-only} {}
-
-// Desktop - and up
-@media #{$breakpoint-desktop-and-up} {}
-
-// Desktop - only
-@media #{$breakpoint-desktop-only} {}
-
-// Large desktop - and up
-@media #{$breakpoint-large-desktop-and-up} {}
-
-// Print
-@media print {}
-
-// Touch
-.touchevents {}
-
-// No touch
-.no-touchevents {}
