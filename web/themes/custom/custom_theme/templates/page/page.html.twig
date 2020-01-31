@@ -1,7 +1,7 @@
 <!-- Begin - wrapper -->
 <div class="layout__wrapper">
 
-  {% if page.sidr_left__primary or page.sidr_left__secondary %}
+  {% if page.sidr_right__primary or page.sidr_right__secondary %}
 
     <!-- Begin - sidr source provider -->
     <aside class="sidr-source-provider">
@@ -9,12 +9,12 @@
       <!-- Begin - navigation -->
       <nav class="slinky-menu" role="navigation">
 
-        {% if page.sidr_left__primary %}
-          {{ page.sidr_left__primary }}
+        {% if page.sidr_right__primary %}
+          {{ page.sidr_right__primary }}
         {% endif %}
 
-        {% if page.sidr_left__secondary %}
-          {{ page.sidr_left__secondary }}
+        {% if page.sidr_right__secondary %}
+          {{ page.sidr_right__secondary }}
         {% endif %}
 
       </nav>
