@@ -72,6 +72,8 @@
   position: relative;
   display: inline-block;
 
+  flex-shrink: 0;
+
   width: 20px;
   height: 20px;
 
@@ -99,7 +101,7 @@
 }
 
 .package-selector__name {
-  font-size: $font-size-h4;
+  font-size: $font-size-h5;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight-bold;
   text-transform: initial;
@@ -109,13 +111,15 @@
 .package-selector__description {
   flex-grow: 1;
 
-  margin-left: 10px;
+  margin-left: 4px;
 
   font-weight: $font-weight;
   text-transform: initial;
 }
 .package-selector__price {
-  font-size: $font-size-h4;
+  flex-shrink: 0;
+
+  font-size: $font-size-h5;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight-bold;
   text-transform: initial;
@@ -153,6 +157,15 @@
 
   .package-selector {
     padding: 13px 16px;
+  }
+  .package-selector__description {
+    margin-left: 10px;
+  }
+  .package-selector__name {
+    font-size: $font-size-h4;
+  }
+  .package-selector__price {
+    font-size: $font-size-h4;
   }
 }
 

@@ -24,9 +24,14 @@ jQuery(function ($) {
   tns({
     container: '.testimonials .view-content',
     center: true,
-    items: 2,
+    items: 1,
     autoplay: true,
-    autoplayHoverPause: true
+    autoplayHoverPause: true,
+    responsive: {
+      768: {
+        items: 2
+      }
+    }
   });
 
   // Explainers.
