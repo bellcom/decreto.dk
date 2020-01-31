@@ -3,65 +3,57 @@
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .paragraph--type--explainer
+// | - .explainer
 // |
 
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
 
+$explainer-hang-outside: 94px;
+
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------
 
-@mixin paragraphs-mixin() {}
+@mixin explainer-mixin() {}
 
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
-.paragraph--type--explainer {
+.explainer {
 
-  // Tiny slider.
-  .tns-ovh {}
-  .tns-outer {
-    position: relative;
-  }
-  .tns-nav {
-    position: absolute;
+  .field--name-field-heading {
+    margin-bottom: 20px;
 
-    top: auto;
-    left: 0;
-    right: 0;
-    bottom: $grid-gutter-width;
+    .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6,
+    h1, h2, h3, h4, h5, h6 {
+      font-size: $font-size-h2;
 
-    z-index: 100;
-
-    text-align: center;
-
-    button {
-      width: 12px;
-      height: 12px;
-
-      padding: 0;
-      margin: 0 6px;
-
-      border: 0;
-      border-radius: 100%;
-
-      background-color: #D95B21;
-
-      &.tns-nav-active {
-        background-color: #FB9769;
-      }
+      color: #FEC3A8;
     }
   }
 
-  button[data-action="start"],
-  button[data-action="stop"],
-  .tns-controls {
-    display: none;
+  .field--name-field-image {
+
+    img {
+      margin: auto;
+    }
   }
+}
+
+.explainer-bg__top {
+  display: none;
+
+  background-color: #fff;
+}
+.explainer-bg__bottom {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  color: #fff;
+  background-color: $brand-primary;
 }
 
 // --------------------------------------------------
@@ -81,13 +73,21 @@
 // Tablet - and up
 @media #{$breakpoint-tablet-and-up} {
 
-  .paragraph--type--explainer {
-    margin-top: $grid-gutter-width;
+  .explainer {
 
-    // Tiny slider.
-    .tns-nav {
-      padding-top: 35px;
+    .field--name-field-heading {
+      margin-bottom: 50px;
     }
+  }
+
+  .explainer-bg__top {
+    display: block;
+
+    height: $explainer-hang-outside;
+  }
+  .explainer-bg__bottom {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -95,7 +95,23 @@
 @media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@media #{$breakpoint-desktop-and-up} {}
+@media #{$breakpoint-desktop-and-up} {
+
+  .explainer {
+
+    .field--name-field-image {
+
+      img {
+        margin-top: 0 - (100px + $explainer-hang-outside);
+        margin-bottom: -80px;
+      }
+    }
+  }
+  .explainer-bg__bottom {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+}
 
 // Desktop - only
 @media #{$breakpoint-desktop-only} {}

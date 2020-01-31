@@ -1,12 +1,15 @@
 <div{{ attributes.addClass('explainer') }}>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        {{ content.field_heading }}
-        {{ content.field_body }}
-      </div>
-      <div class="col-sm-6 hidden-xs">
-        {{ content.field_image }}
+  <div class="explainer-bg__top"></div>
+  <div class="explainer-bg__bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          {{ content.field_heading }}
+          {{ content.field_body }}
+        </div>
+        <div class="col-sm-6 hidden-xs">
+          {{ content.field_image }}
+        </div>
       </div>
     </div>
   </div>
