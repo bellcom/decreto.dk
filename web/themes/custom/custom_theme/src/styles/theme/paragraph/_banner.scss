@@ -138,7 +138,16 @@ $paragraph-banner-box-hang-outside: 40px;
 @media #{$breakpoint-mobile-and-up} {}
 
 // Mobile - only
-@media #{$breakpoint-mobile-only} {}
+@media #{$breakpoint-mobile-only} {
+
+  .paragraph--type--banner-1-box,
+  .paragraph--type--banner-2-boxes {
+
+    .box {
+      margin-top: 20px;
+    }
+  }
+}
 
 // Tablet - and up
 @media #{$breakpoint-tablet-and-up} {

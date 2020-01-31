@@ -69,6 +69,7 @@ $paragraph-spacing-bottom-lg: 60px;
 
       img {
         margin-left: auto;
+        margin-right: auto;
       }
     }
   }
@@ -79,6 +80,7 @@ $paragraph-spacing-bottom-lg: 60px;
 
       img {
         margin-right: auto;
+        margin-left: auto;
       }
     }
   }
@@ -100,10 +102,46 @@ $paragraph-spacing-bottom-lg: 60px;
 @media #{$breakpoint-mobile-and-up} {}
 
 // Mobile - only
-@media #{$breakpoint-mobile-only} {}
+@media #{$breakpoint-mobile-only} {
+
+  .paragraph--type--simple-text,
+  .paragraph--type--simple-text-2-columns,
+  .paragraph--type--text-with-image {
+
+    [class*="col-"] {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
 
 // Tablet - and up
-@media #{$breakpoint-tablet-and-up} {}
+@media #{$breakpoint-tablet-and-up} {
+
+
+  .paragraph--type--text-with-image {
+
+    .image-position--left {
+
+      .field--name-field-image {
+
+        img {
+          margin-right: initial;
+        }
+      }
+    }
+
+    .image-position--right {
+
+      .field--name-field-image {
+
+        img {
+          margin-left: initial;
+        }
+      }
+    }
+  }
+}
 
 // Tablet - only
 @media #{$breakpoint-tablet-only} {}

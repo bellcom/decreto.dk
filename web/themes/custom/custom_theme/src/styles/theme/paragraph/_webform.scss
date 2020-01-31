@@ -21,6 +21,8 @@
 // --------------------------------------------------
 
 .paragraph--type--webform {
+  padding-top: 60px;
+  padding-bottom: 55px;
 
   .form-item-heading {
     display: none;
@@ -53,13 +55,7 @@
 @media #{$breakpoint-tablet-and-up} {}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {
-
-  .paragraph--type--webform {
-    padding-top: 50px;
-    padding-bottom: 45px;
-  }
-}
+@media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {

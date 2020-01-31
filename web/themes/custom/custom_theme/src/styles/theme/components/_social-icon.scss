@@ -26,12 +26,12 @@
   justify-content: center;
   align-items: center;
 
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 
-  font-size: $font-size-base;
+  font-size: $font-size-small;
 
-  border: 4px solid $brand-secondary--alternative;
+  border: 2px solid $brand-secondary--alternative;
   border-radius: 100%;
 
   &, &:hover {
@@ -60,7 +60,17 @@
 @media #{$breakpoint-mobile-only} {}
 
 // Tablet - and up
-@media #{$breakpoint-tablet-and-up} {}
+@media #{$breakpoint-tablet-and-up} {
+
+  .social-icon {
+    height: 40px;
+    width: 40px;
+
+    font-size: $font-size-base;
+
+    border-width: 4px;
+  }
+}
 
 // Tablet - only
 @media #{$breakpoint-tablet-only} {}

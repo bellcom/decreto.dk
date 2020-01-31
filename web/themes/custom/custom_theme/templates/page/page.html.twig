@@ -216,145 +216,151 @@
     <!-- Begin - second row -->
     <div class="layout__footer-row layout__footer-row--second">
       <div class="container">
-        <div class="flexy-row">
-          Decreto, copyright © 2014-2020 Created by Bellcom
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-push-6">
+            <div class="flexy-row">
+              <div class="flexy-spacer"></div>
 
-          <div class="flexy-spacer"></div>
+              <!-- Begin - social icons -->
+              <nav role="navigation">
+                <div class="flexy-list">
 
-          <!-- Begin - social icons -->
-          <nav role="navigation">
-            <div class="flexy-list">
+                  {% if theme_settings.social.facebook.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.facebook.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--facebook"
+                        title="{{ theme_settings.social.facebook.tooltip }}">
+                        <span class="icon fa fa-facebook-f"></span>
+                      </a>
+                    </div>
+                  {% endif %}
 
-              {% if theme_settings.social.facebook.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.facebook.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--facebook"
-                    title="{{ theme_settings.social.facebook.tooltip }}">
-                    <span class="icon fa fa-facebook-f"></span>
-                  </a>
+                  {% if theme_settings.social.twitter.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.twitter.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--twitter"
+                        title="{{ theme_settings.social.twitter.tooltip }}">
+                        <span class="icon fa fa-twitter"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.social.googleplus.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.googleplus.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--google-plus"
+                        title="{{ theme_settings.social.googleplus.tooltip }}">
+                        <span class="icon fa fa-google-plus"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.social.linkedin.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.linkedin.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--linkedin"
+                        title="{{ theme_settings.social.linkedin.tooltip }}">
+                        <span class="icon fa fa-linkedin"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.social.pinterest.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.pinterest.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--pinterest"
+                        title="{{ theme_settings.social.pinterest.tooltip }}">
+                        <span class="icon fa fa-pinterest"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.social.instagram.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.instagram.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--instagram"
+                        title="{{ theme_settings.social.instagram.tooltip }}">
+                        <span class="icon fa fa-instagram"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.social.youtube.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.youtube.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--youtube"
+                        title="{{ theme_settings.social.youtube.tooltip }}">
+                        <span class="icon fa fa-youtube"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.social.vimeo.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.vimeo.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--vimeo"
+                        title="{{ theme_settings.social.vimeo.tooltip }}">
+                        <span class="icon fa fa-vimeo"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if theme_settings.social.github.active %}
+                    <div>
+                      <a
+                        href="{{ theme_settings.social.github.url }}"
+                        target="_blank"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        class="social-icon social-icon--github"
+                        title="{{ theme_settings.social.github.tooltip }}">
+                        <span class="icon fa fa-github"></span>
+                      </a>
+                    </div>
+                  {% endif %}
+
                 </div>
-              {% endif %}
+              </nav>
+              <!-- End - social icons -->
 
-              {% if theme_settings.social.twitter.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.twitter.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--twitter"
-                    title="{{ theme_settings.social.twitter.tooltip }}">
-                    <span class="icon fa fa-twitter"></span>
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if theme_settings.social.googleplus.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.googleplus.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--google-plus"
-                    title="{{ theme_settings.social.googleplus.tooltip }}">
-                    <span class="icon fa fa-google-plus"></span>
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if theme_settings.social.linkedin.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.linkedin.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--linkedin"
-                    title="{{ theme_settings.social.linkedin.tooltip }}">
-                    <span class="icon fa fa-linkedin"></span>
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if theme_settings.social.pinterest.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.pinterest.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--pinterest"
-                    title="{{ theme_settings.social.pinterest.tooltip }}">
-                    <span class="icon fa fa-pinterest"></span>
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if theme_settings.social.instagram.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.instagram.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--instagram"
-                    title="{{ theme_settings.social.instagram.tooltip }}">
-                    <span class="icon fa fa-instagram"></span>
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if theme_settings.social.youtube.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.youtube.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--youtube"
-                    title="{{ theme_settings.social.youtube.tooltip }}">
-                    <span class="icon fa fa-youtube"></span>
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if theme_settings.social.vimeo.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.vimeo.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--vimeo"
-                    title="{{ theme_settings.social.vimeo.tooltip }}">
-                    <span class="icon fa fa-vimeo"></span>
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if theme_settings.social.github.active %}
-                <div>
-                  <a
-                    href="{{ theme_settings.social.github.url }}"
-                    target="_blank"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    class="social-icon social-icon--github"
-                    title="{{ theme_settings.social.github.tooltip }}">
-                    <span class="icon fa fa-github"></span>
-                  </a>
-                </div>
-              {% endif %}
-
+              <div class="flexy-spacer visible-xs"></div>
             </div>
-          </nav>
-          <!-- End - social icons -->
-
+          </div>
+          <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+            {{ 'Decreto, copyright © 2014-2020 Created by Bellcom' | trans }}
+          </div>
         </div>
       </div>
     </div>
