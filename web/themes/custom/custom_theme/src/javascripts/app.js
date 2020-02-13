@@ -20,20 +20,6 @@ jQuery(function ($) {
   // Enable tooltips.
   $('[data-toggle="tooltip"]').tooltip();
 
-  // Testimonials.
-  tns({
-    container: '.testimonials .view-content',
-    center: true,
-    items: 1,
-    autoplay: true,
-    autoplayHoverPause: true,
-    responsive: {
-      768: {
-        items: 2
-      }
-    }
-  });
-
   // Explainers.
   tns({
     container: '.explainers .view-content',
