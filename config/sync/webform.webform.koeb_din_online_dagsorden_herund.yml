@@ -194,7 +194,7 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: Bekræftelse
-      body: '[webform_submission:values:message:value]'
+      body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -228,7 +228,7 @@ handlers:
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
       subject: 'Notifikation om besked'
-      body: '[webform_submission:values:message:value]'
+      body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
