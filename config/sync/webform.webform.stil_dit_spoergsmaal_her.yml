@@ -98,10 +98,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: url
   confirmation_title: ''
   confirmation_message: ''
-  confirmation_url: ''
+  confirmation_url: /node/8
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
