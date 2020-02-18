@@ -12,7 +12,7 @@ id: stil_dit_spoergsmaal_her
 title: 'Stil dit spørgsmål her'
 description: ''
 category: ''
-elements: "organisation:\n  '#type': textfield\n  '#title': Organisation\n  '#placeholder': 'Navn på din organisation eller virksomhed'\n  '#required': true\ncontainer_wrapper:\n  '#type': container\n  '#attributes':\n    class:\n      - row\n  container_column:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    name:\n      '#type': textfield\n      '#title': Navn\n      '#placeholder': 'Kontakt persons navn'\n      '#required': true\n  container_column_1:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    email:\n      '#type': email\n      '#title': 'E-mail adresse'\n      '#placeholder': 'Kontakt persons e-mail adresse'\n      '#required': true\ncontainer_1:\n  '#type': container\n  '#attributes':\n    class:\n      - row\n  container_column_3:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    telefon:\n      '#type': tel\n      '#title': Telefon\n      '#placeholder': 'Kontakt persons telefon nr.'\n      '#required': true\n  container_column_4:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    cvr_ean:\n      '#type': textfield\n      '#title': 'CVR / EAN'\n      '#placeholder': 'På din organisation eller virksomhed'\n      '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send nu'"
+elements: "organisation:\n  '#type': textfield\n  '#title': Organisation\n  '#placeholder': 'Navn på din organisation eller virksomhed'\n  '#required': true\ncontainer_wrapper:\n  '#type': container\n  '#attributes':\n    class:\n      - row\n  container_column:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    name:\n      '#type': textfield\n      '#title': Navn\n      '#placeholder': 'Kontakt persons navn'\n      '#required': true\n  container_column_1:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    email:\n      '#type': email\n      '#title': 'E-mail adresse'\n      '#placeholder': 'Kontakt persons e-mail adresse'\n      '#required': true\ncontainer_1:\n  '#type': container\n  '#attributes':\n    class:\n      - row\n  container_column_3:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    telefon:\n      '#type': tel\n      '#title': Telefon\n      '#placeholder': 'Kontakt persons telefon nr.'\n      '#required': true\n  container_column_4:\n    '#type': container\n    '#attributes':\n      class:\n        - 'col-xs-12 col-sm-6'\n    cvr_ean:\n      '#type': textfield\n      '#title': 'CVR / EAN'\n      '#placeholder': 'På din organisation eller virksomhed'\n      '#required': true\nmessage:\n  '#type': textarea\n  '#title': Besked\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Send"
 css: ''
 javascript: ''
 settings:
@@ -98,10 +98,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: url
   confirmation_title: ''
   confirmation_message: ''
-  confirmation_url: ''
+  confirmation_url: /node/8
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -184,7 +184,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: _default
+      to_mail: '[webform_submission:values:email:raw]'
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -224,10 +224,10 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: _default
+      from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: _default
-      subject: 'Notifikation om besked'
+      from_name: '[webform_submission:values:name:raw]'
+      subject: Notifikation
       body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
