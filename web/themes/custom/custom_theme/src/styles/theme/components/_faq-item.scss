@@ -40,12 +40,25 @@
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    position: relative;
 
     user-select: none;
+    &:after{
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: -15px;
+      color: $headings-color-highlighted;
+      font-size: 40px;
+    }
   }
 
   .open > & {
     background-color: #fff;
+     h3::after{
+      content: "\2012";
+
+    }
   }
 }
 .faq-item__body {

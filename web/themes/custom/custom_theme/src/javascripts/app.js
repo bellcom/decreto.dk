@@ -19,13 +19,14 @@ jQuery(function ($) {
 
   // Enable tooltips.
   $('[data-toggle="tooltip"]').tooltip();
-
   // Explainers.
-  tns({
-    container: '.explainers .view-content',
-    center: true,
-    items: 1,
-    autoplay: true,
-    autoplayHoverPause: true
-  });
+  if (jQuery('.explainers .view-content').length) {
+    tns({
+      container: '.explainers .view-content',
+      center: true,
+      items: 1,
+      autoplay: true,
+      autoplayHoverPause: true
+    });
+  }
 });
